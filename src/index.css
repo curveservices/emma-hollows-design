@@ -1,0 +1,23 @@
+:root {
+  --primary: #202020;
+  --secondary: #c5afff;
+  --background-blur: linear-gradient(#c5afff, #65558f);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary);
+}
+
+body {
+  margin: 0;
+  letter-spacing: 2.5px;
+  line-height: 1.3;
+}

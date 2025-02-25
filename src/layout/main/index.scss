@@ -1,0 +1,23 @@
+.app{
+    overflow: hidden;
+    font-family: 'Proxima Nova', sans-serif;
+    font-display: swap;
+    .blur-left {
+            position: absolute;
+            top: 0;
+            left: -200px;
+            width: 600px;
+            height: 500px;
+            filter: blur(200px);
+            background: var(--background-blur);
+    }
+    .blur-right {
+            position: absolute;
+            bottom: 0;
+            right: -300px;
+            width: 600px;
+            height: 500px;
+            filter: blur(200px);
+            background: var(--background-blur);
+    }
+}
