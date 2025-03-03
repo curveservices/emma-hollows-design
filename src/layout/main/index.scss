@@ -71,6 +71,26 @@
       margin-top: 1rem;
       gap: 2rem;
     }
+    .anim {
+      animation: fadeIn 1.5s forwards;
+
+      .card-container {
+        .flip-card:nth-child(1) {
+          animation: fadeInUp 1s 0.4s backwards;
+        }
+
+        .flip-card:nth-child(2) {
+          animation: fadeInUp 1s 0.6s backwards;
+        }
+
+        .flip-card:nth-child(3) {
+          animation: fadeInUp 1s 0.8s backwards;
+        }
+      }
+    }
+    .none {
+      opacity: 0;
+    }
   }
 }
 .back-to-top {
