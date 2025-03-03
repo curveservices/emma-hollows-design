@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import emma1 from '../../assets/images/emma1.webp';
 import emma2 from '../../assets/images/emma2.webp';
 import Button from '../../components/button';
 import Socials from '../../components/socials';
 import './index.scss';
+
 const About = () => {
+  const [second, setSecond] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollSecond = window.scrollY;
+      setSecond(scrollSecond > 150)
+    };
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className='about-page'>
       <section className="hero">
@@ -44,7 +54,7 @@ const About = () => {
           <Socials/>
         </div>
       </section>
-      <div className="second-section">
+      <div className={`second-section ${second ? "anim" : "none"}`}>
         <div className="second-left">
           <div className="subtitle desktop">designer | supervisor | maker</div>
           <div className="subtitle mobile-view">Maker</div>
