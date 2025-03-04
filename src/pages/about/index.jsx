@@ -28,12 +28,12 @@ const About = () => {
           <div className="btn-container">
             <Button
               text='work with me'
-              link='contact'
+              link='/contact'
               background='var(--secondary)'
             />
             <Button
               text='my portfolio'
-              link='portfolio'
+              link='/portfolio'
               color='#fff'
             />
           </div>
