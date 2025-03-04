@@ -1,107 +1,45 @@
 import React from 'react';
+import FlipCard from '../flipcard';
 import bodice from '../../../assets/images/bodice.webp';
 import card1back from '../../../assets/images/bodice1.webp';
-import Button from '../../button';
-import './index.scss';
+import tina from '../../../assets/images/home-hero.webp';
+import card2back from '../../../assets/images/tina2.webp';
+import sophie from '../../../assets/images/sophie1.webp';
+import card3back from '../../../assets/images/heineken3.webp';
 
 
-const FeaturedWork = () => {
+const defaultCardsData = [
+  {
+    frontImage: bodice,
+    backImage: card1back,
+    title: 'Magic at the Musicals',
+    description: 'Designer and Maker',
+    viewLink: '/bodice-magic-at-the-musicals'
+  },
+  {
+    frontImage: tina,
+    backImage: card2back,
+    title: 'Tina the musical',
+    description: 'Principal Dresser to Tina',
+    viewLink: '/tina-turner-musical'
+  },
+  {
+    frontImage: sophie,
+    backImage: card3back,
+    title: 'Heineken Jackets and Hats',
+    description: 'Designer and Maker',
+    viewLink: '/heinken-jackets'
+  },
+];
+
+const FeaturedWork = ({ cardsData = defaultCardsData }) => {
   return (
-    <div className='card-container'>
-          <div className="flip-card">
-              <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                      <img
-                          src={bodice}
-                          alt="Custom bodice for magic at the musicals"
-                          loading='lazy'
-                          className='card-image'
-                      />
-                      <div className="front-title">
-                           <h2 className="name">Magic at the Musicals</h2>
-                      </div>
-                  </div>
-                  <div className="flip-card-back">
-                      <img
-                          src={card1back}
-                          alt="Custom Bodice for Magic at the Musicals"
-                          loading='lazy'
-                          className='card-back-image'
-                      />
-                      <h2 className="name">Magic at the Musicals</h2>
-                      <p className='desc subtitle'>Designer and Maker</p>
-                      <div className="btn-container">
-                        <Button
-                        text='View'
-                        link='/'
-                        background='var(--secondary)'
-                        />
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="flip-card">
-              <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                      <img
-                          src={bodice}
-                          alt="Custom bodice for magic at the musicals"
-                          loading='lazy'
-                          className='card-image'
-                      />
-                      <h2 className="name">Magic at the Musicals</h2>
-                  </div>
-                  <div className="flip-card-back">
-                      <img
-                          src={card1back}
-                          alt="Custom Bodice for Magic at the Musicals"
-                          loading='lazy'
-                          className='card-back-image'
-                      />
-                      <h2 className="name">Magic at the Musicals</h2>
-                      <p className='desc subtitle'>Designer and Maker</p>
-                       <div className="btn-container">
-                        <Button
-                        text='View'
-                        link='/'
-                        background='var(--secondary)'
-                        />
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="flip-card">
-              <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                      <img
-                          src={bodice}
-                          alt="Custom bodice for magic at the musicals"
-                          loading='lazy'
-                          className='card-image'
-                      />
-                      <h2 className="name">Magic at the Musicals</h2>
-                  </div>
-                  <div className="flip-card-back">
-                      <img
-                          src={card1back}
-                          alt="Custom Bodice for Magic at the Musicals"
-                          loading='lazy'
-                          className='card-back-image'
-                      />
-                      <h2 className="name">Magic at the Musicals</h2>
-                      <p className='desc subtitle'>Designer and Maker</p>
-                       <div className="btn-container">
-                        <Button
-                        text='View'
-                        link='/'
-                        background='var(--secondary)'
-                        />
-                      </div>
-                  </div>
-              </div>
-        </div>
+    <div className="card-container">
+      {cardsData.map((card, index) => (
+        <FlipCard key={index} {...card} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedWork
+export default FeaturedWork;
