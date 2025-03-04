@@ -5,11 +5,14 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-const Home = React.lazy(() => import("./pages/home/index.jsx"));
 import LoadingSpinner from './components/loadingSpinner/index.jsx';
 import Layout from "./layout/main/index.jsx";
-import "./App.scss";
+import Home from "./pages/home/index.jsx"
 import About from "./pages/about/index.jsx";
+import Portfolio from "./pages/portfolio/index.jsx";
+import NotFound from './pages/404/index.jsx';
+
+import "./App.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,8 +32,20 @@ const router = createBrowserRouter(
           </Suspense>
         }
         />
+        <Route path="portfolio" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Portfolio/>
+          </Suspense>
+        }
+          
+        />
       </Route>
-
+      <Route path="*" element={
+        <Suspense fallback={<LoadingSpinner />}>
+          <NotFound/>
+        </Suspense>
+      }
+      />
     </>,
   ),
 );
