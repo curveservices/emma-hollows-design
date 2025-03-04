@@ -13,9 +13,8 @@
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  &hover {
+  &:hover {
     transform: translateY(-3px);
-    background-color: var(--secondary);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
 }
