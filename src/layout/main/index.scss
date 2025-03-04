@@ -29,10 +29,11 @@
 .app {
   font-family: "Proxima Nova", sans-serif;
   font-display: swap;
-  animation: fadeIn 1s 0.3s backwards;
+
   .home-page,
-  .about-page
-   {
+  .about-page,
+  .portfolio-page {
+     animation: fadeIn 1s 0.2s backwards;
     h1 {
       margin: 0;
       font-size: 60px;
@@ -86,6 +87,9 @@
         .flip-card:nth-child(3) {
           animation: fadeInUp 1s 0.8s backwards;
         }
+        .flip-card:nth-child(4) {
+          animation: fadeInUp 1s 1s backwards;
+        }
       }
     }
     .none {
@@ -132,7 +136,8 @@
       height: 400px;
     }
     .home-page,
-    .about-page {
+    .about-page,
+    .portfolio-page {
       h1 {
         font-size: 36px;
       }
