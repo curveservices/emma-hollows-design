@@ -29,10 +29,13 @@
 .app {
   font-family: "Proxima Nova", sans-serif;
   font-display: swap;
-
   .home-page,
   .about-page,
-  .portfolio-page {
+  .portfolio-page,
+  .designer-page,
+  .maker-page,
+  .wardrobe-page,
+  .film-page {
      animation: fadeIn 1s 0.2s backwards;
     h1 {
       margin: 0;
@@ -61,7 +64,7 @@
     .subtitle {
       font-family: "Avenir Next";
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 500;
       letter-spacing: 4.5px;
       color: var(--secondary);
@@ -71,6 +74,49 @@
       justify-content: center;
       margin-top: 1rem;
       gap: 2rem;
+    }
+    .hero {
+      display: grid;
+      height: 100vh;
+      color: #fff;
+
+      &>* {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-image {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+        opacity: 0.5;
+        z-index: -1;
+        object-fit: cover;
+      }
+
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+      }
+    }
+
+    .second-section {
+      margin: 5rem 2rem;
+      padding: 0rem;
+
+      .text-box {
+        text-align: center;
+        padding: 0 8rem;
+      }
+    }
+
+    .third-section {
+      margin: 5rem 2rem;
     }
     .anim {
       animation: fadeIn 1.5s forwards;
@@ -121,23 +167,13 @@
 }
 @media screen and (max-width: 768px)  {
   .app {
-    .blur-left {
-      position: absolute;
-      top: 810px;
-      left: -200px;
-      width: 400px;
-      height: 400px;
-    }
-  
-    .blur-right {
-      top: 420%;
-      right: 0;
-      width: 400px;
-      height: 400px;
-    }
     .home-page,
     .about-page,
-    .portfolio-page {
+    .portfolio-page,
+    .designer-page,
+    .maker-page,
+    .wardrobe-page,
+    .film-page {
       h1 {
         font-size: 36px;
       }
@@ -153,9 +189,19 @@
       .subtitle {
         font-size: 18px;
       }
+      .second-section {
+        margin: 2rem;
+        padding: 0;
+
+        .text-box {
+          padding: 0;
+        }
+      }
+      .third-section {
+        margin: 0;
+      }
     }
   }
-
   .back-to-top {
     font-size: 20px;
     padding: 5px;
