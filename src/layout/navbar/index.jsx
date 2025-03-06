@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  faBars,
-  faClose,
   faFileAlt,
   faHouse,
   faSuitcase,
@@ -51,7 +49,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             title="Home Page"
-            className="home-link"
+            className={({ isActive }) => isActive ? 'active' : ''}
             onClick={() => setShowNav(false)}
           >
             <div className="menu-container">
@@ -62,7 +60,7 @@ const Navbar = () => {
           <NavLink
             to="about-me"
             title="About Me"
-            className="about-link"
+            className={({ isActive }) => isActive ? 'active' : ''}
             onClick={() => setShowNav(false)}
           >
             <div className="menu-container">
@@ -73,7 +71,7 @@ const Navbar = () => {
           <NavLink
             to="/portfolio"
             title="Portfolio"
-            className="portfolio-link"
+            className={({ isActive }) => isActive ? 'active' : ''}
             onClick={() => setShowNav(false)}
           >
             <div className="menu-container">
@@ -84,7 +82,7 @@ const Navbar = () => {
           <NavLink
             to="/cv"
             title="CV"
-            className="cv-link"
+            className={({ isActive }) => isActive ? 'active' : ''}
             onClick={() => setShowNav(false)}
           >
             <div className="menu-container">
