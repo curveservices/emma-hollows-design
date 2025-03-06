@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import portfolioHero from '../../assets/images/portfolio-hero.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork'
@@ -9,51 +9,42 @@ import wardrobe from '../../assets/images/home-hero.webp';
 import card3back from '../../assets/images/tina2.webp';
 import film from '../../assets/images/film.webp';
 import card4back from '../../assets/images/mw2.webp';
-
+import BookFlipSmall from '../../components/sketchBooks/flipBook';
 import './index.scss';
+import useScrollStates from '../../components/scrollState';
 
 const cardsData = [
   {
     frontImage: designer,
     backImage: portfolioHero,
     title: 'Designer',
-    description: 'Designer | Supervisor | Maker',
-    viewLink: '/designer'
+    description: 'Designer Supervisor Maker',
+    viewLink: 'designer'
   },
   {
     frontImage: maker,
     backImage: card2back,
     title: 'Maker',
-    description: 'Designer | Supervisor | Maker',
-    viewLink: '/maker'
+    description: 'Designer Supervisor Maker',
+    viewLink: 'maker'
   },
   {
     frontImage: wardrobe,
     backImage: card3back,
     title: 'Wardrobe',
-    description: 'Designer | Supervisor | Maker',
-    viewLink: '/wardrobe'
+    description: 'Designer Supervisor Maker',
+    viewLink: 'wardrobe'
   },
   {
     frontImage: film,
     backImage: card4back,
     title: 'Film',
-    description: 'Designer | Supervisor | Maker',
-    viewLink: '/film'
+    description: 'Designer Supervisor Maker',
+    viewLink: 'film'
   },
 ];
 const Portfolio = () => {
-  const [second, setSecond] = useState(false);
-    const [third, setThird] = useState(false);
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollSecond = window.scrollY;
-        const scrollThird = window.scrollY;
-        setSecond(scrollSecond > 150)
-        setThird(scrollThird > 0)
-      };
-      window.addEventListener('scroll', handleScroll)
-    }, []);
+  const { second, third } = useScrollStates();
   return (
     <>
       <div className='portfolio-page'>
@@ -81,17 +72,19 @@ const Portfolio = () => {
             <div className="subtitle">My Work</div>
             <h2>Explore my portfolio</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur. Molestie consectetur malesuada venenatis dis suspendisse gravida egestas. Lacinia augue euismod massa in et diam nisl. Arcu metus duis et risus vel tristique dictumst praesent.
+              I have been working for a number of years in both the UK and the USA where I trained in Costume Design at the University of
+              Massachusetts Amherst. Some previous highlights of my career have been working on The Nutcracker at the Royal Albert Hall in London;
+              numerous productions at Shakespeare and Company in Massachusetts; and touring up the East Coast of the USA with The Cambridge American Stage Tour.
             </p>
           </div>
-          <FeaturedWork cardsData={cardsData}/>
+          <FeaturedWork cardsData={cardsData} />
         </section>
         <section className={`third-section ${third ? "anim" : "none"}`}>
           <div className="text-box">
             <div className="subtitle">design sketches</div>
             <h2>Sketch books</h2>
           </div>
-          <p>!! sketch books container !!</p>
+          <BookFlipSmall/>
         </section>
       </div>
     </>
