@@ -4,19 +4,10 @@ import hero from "../../assets/images/home-hero.webp";
 import "./index.scss";
 import FeaturedWork from "../../components/cards/featuredWork";
 import Testimonials from "../../components/testimonials";
+import useScrollStates from "../../components/scrollState";
 
 const Home = () => {
-  const [second, setSecond] = useState(false);
-  const [third, setThird] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollSecond = window.scrollY;
-      const scrollThird = window.scrollY;
-      setSecond(scrollSecond > 150)
-      setThird(scrollThird > 1200)
-    };
-    window.addEventListener('scroll', handleScroll)
-  }, []);
+  const { second, third } = useScrollStates();
   return (
     <>
       <div className="home-page">
@@ -48,7 +39,7 @@ const Home = () => {
               the other members of my design team and the actors, to bounce ideas around and hear what discoveries
               they have made in their own research, which all informs my costume designs.</p>
           </div>
-          <FeaturedWork/>
+          <FeaturedWork cardWidth='400px'/>
           <div className="btn-container">
             <Button
               text='portfolio'
