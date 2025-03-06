@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import emma1 from '../../assets/images/emma1.webp';
 import emma2 from '../../assets/images/emma2.webp';
 import Button from '../../components/button';
 import Socials from '../../components/socials';
+import useScrollStates from '../../components/scrollState';
 import './index.scss';
 
 const About = () => {
-  const [second, setSecond] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollSecond = window.scrollY;
-      setSecond(scrollSecond > 150)
-    };
-    window.addEventListener('scroll', handleScroll);
-  }, []);
+  const { second, third } = useScrollStates();
 
   return (
     <div className='about-page'>
-      <section className="hero">
+      <section className="about-hero">
         <div className="hero-left">
           <h1>About Me</h1>
           <img
