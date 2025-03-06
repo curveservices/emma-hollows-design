@@ -13,12 +13,13 @@
   > * {
     display: inline-block;
     margin-right: 10px;
+    color: #fff;
   }
   a {
     text-decoration: none;
     color: #fff;
     &:hover {
-      color: #000;
+      color: var(--secondary);
     }
   }
   .crumb {
