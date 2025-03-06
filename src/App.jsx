@@ -11,9 +11,11 @@ import Home from "./pages/home/index.jsx"
 import About from "./pages/about/index.jsx";
 import Portfolio from "./pages/portfolio/index.jsx";
 import NotFound from './pages/404/index.jsx';
-
+import Designer from "./pages/designer/index.jsx";
+import Maker from "./pages/maker/index.jsx";
+import Wardrobe from "./pages/wardrobe/index.jsx";
+import Film from "./pages/film/index.jsx";
 import "./App.scss";
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -37,7 +39,30 @@ const router = createBrowserRouter(
             <Portfolio/>
           </Suspense>
         }
-          
+        />
+        <Route path=":id/designer" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Designer/>
+          </Suspense>
+        }
+        />
+        <Route path=":id/maker" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Maker />
+          </Suspense>
+        }
+        />
+        <Route path=":id/wardrobe" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Wardrobe />
+          </Suspense>
+        }
+        />
+        <Route path=":id/film" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Film/>
+          </Suspense>
+        }
         />
       </Route>
       <Route path="*" element={
