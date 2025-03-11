@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "../../components/button";
 import hero from "../../assets/images/home-hero.webp";
-import "./index.scss";
 import FeaturedWork from "../../components/cards/featuredWork";
 import Testimonials from "../../components/testimonials";
 import useScrollStates from "../../components/scrollState";
