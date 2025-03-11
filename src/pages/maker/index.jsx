@@ -4,68 +4,14 @@ import maker from '../../assets/images/bodice.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork';
 import Testimonials from '../../components/testimonials';
-
-const cardsData = [
-  {
-    frontImage: '',
-    backImage: '',
-    title: 'Bacchae',
-    description: 'Costume Designer, Draper, Dyer, Stitcher',
-    viewLink: '/bacchae-umass-amherst'
-  },
-//   {
-//     frontImage: sophiatown,
-//     backImage: sophiatown2,
-//     title: 'Sophia Town',
-//     description: 'Costume Designer, Milliner, Dyer, Stitcher',
-//     viewLink: '/sophiatown'
-//   },
-//   {
-//     frontImage: snowflakes,
-//     backImage: snowflakes2,
-//     title: 'Snowflakes',
-//     description: 'Costume Designer',
-//     viewLink: '/snowflakesumass-rand-theatre'
-//   },
-//   {
-//     frontImage: rent,
-//     backImage: rent2,
-//     title: 'Rent',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/rent-adc-theatre-uk'
-//   },
-//   {
-//     frontImage: cadava,
-//     backImage: cadava2,
-//     title: 'Cadaver Exquisito ',
-//     description: 'Costume Designer',
-//     viewLink: '/cadaver-esquisito-umass-amherst'
-//   },
-//   {
-//     frontImage: copenhagen,
-//     backImage: copenhagen2,
-//     title: 'Copenhagen',
-//     description: 'Costume Designer',
-//     viewLink: '/rcopenhagen-corpus-playroom-uk'
-//   },
-//   {
-//     frontImage: tpatp,
-//     backImage: tpatp2,
-//     title: 'The Princess and the Pea',
-//     description: 'Costume Designer and Wardrobe Mistress',
-//     viewLink: '/footlights-the-princess-and-the-peaadc-theatre'
-//   },
-//   {
-//     frontImage: footlights,
-//     backImage: footlights2,
-//     title: 'Footlights: The History of Everything',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/footlights-history-of-everything-adc-theatre-uk'
-//   },
-]
+import LoadingSpinner from '../../components/loadingSpinner';
+import useFirestoreData from '../../components/useFirestoreData';
 
 const Maker = () => {
-    const { second, third } = useScrollStates();
+  const { second, third } = useScrollStates();
+  const {cardsData, loading, error} = useFirestoreData('maker');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div>Error: {error}</div>;
   return (
     <div className='maker-page'>
         <section className="hero">
@@ -101,7 +47,8 @@ const Maker = () => {
                       The Nutcracker at the Royal Albert Hall in London; numerous productions at Shakespeare and Company in Massachusetts.
                   </p>
               </div>
-              <FeaturedWork cardsData={cardsData} cardWidth='400px' />
+              <div className="subtitle" style={{textAlign:'center', paddingTop: '2rem'}}>Garments</div>
+              <FeaturedWork cardWidth='400px' cardsData={cardsData}  />
           </section>
           <section className={`third-section ${third ? 'anim' : 'none'}`}>
               <Testimonials />
