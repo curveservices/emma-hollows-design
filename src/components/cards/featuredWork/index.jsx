@@ -14,7 +14,7 @@ const defaultCardsData = [
     backImage: card1back,
     title: 'Magic at the Musicals',
     description: 'Designer and Maker',
-    viewLink: '/bodice-magic-at-the-musicals'
+    viewLink: '/magic-at-the-musicals'
   },
   {
     frontImage: tina,
