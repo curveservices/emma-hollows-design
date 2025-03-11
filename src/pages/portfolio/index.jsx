@@ -9,7 +9,6 @@ import wardrobe from '../../assets/images/home-hero.webp';
 import card3back from '../../assets/images/tina2.webp';
 import film from '../../assets/images/film.webp';
 import card4back from '../../assets/images/mw2.webp';
-import BookFlipSmall from '../../components/sketchBooks/flipBook';
 import './index.scss';
 import useScrollStates from '../../components/scrollState';
 
@@ -84,7 +83,6 @@ const Portfolio = () => {
             <div className="subtitle">design sketches</div>
             <h2>Sketch books</h2>
           </div>
-          <BookFlipSmall/>
         </section>
       </div>
     </>
