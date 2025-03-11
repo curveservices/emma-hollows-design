@@ -51,7 +51,10 @@
             padding: 0 0.3rem;
         }
         .front-title {
-            margin-top: -5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10rem;
             background: var(--nav);
             min-width: fit-content;
             height: 100px;
