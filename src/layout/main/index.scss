@@ -32,6 +32,8 @@
   .home-page,
   .about-page,
   .portfolio-page,
+  .cv-page,
+  .contact-page,
   .designer-page,
   .maker-page,
   .wardrobe-page,
@@ -170,10 +172,12 @@
     .home-page,
     .about-page,
     .portfolio-page,
+    .cv-page,
     .designer-page,
     .maker-page,
     .wardrobe-page,
-    .film-page {
+    .film-page,
+    .contact-page {
       h1 {
         font-size: 36px;
       }
