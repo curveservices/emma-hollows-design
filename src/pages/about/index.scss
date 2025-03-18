@@ -52,38 +52,32 @@
     }
 }
 @media screen and (max-width: 768px) {
-
     .about-page {
         padding: 8rem 2rem 0;
-        .desktop {
-            display: none;
+        .subtitle {
+            text-align: center;
         }
         .portrait-image {
             width: 250px;
             height: 250px;
         }
-        .hero {
+        .about-hero {
             flex-direction: column;
             align-items: center;
             gap: 2rem;
-
             .hero-left {
                 width: 100%;
                 align-items: center;
             }
-            .btn-container {
-                gap: 1rem;
-            }
             .hero-right {
                 width: 100%;
                 gap: 1rem;
-            }            
+            }
         }
         .second-section {
             flex-direction: column-reverse;
             align-items: center;
             margin: 1rem 0;
-
             .second-left {
                 width: 100%;
                 margin-top: 2rem;
