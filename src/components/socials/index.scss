@@ -9,11 +9,11 @@
 }
 .icons {
   a {
-    color: #fff;
     padding: 8px;
     display: block;
     font-size: 32px;
     line-height: 20px;
+    cursor: pointer;
     &:hover svg {
       color: #fff;
       transform: scale(1.2);
