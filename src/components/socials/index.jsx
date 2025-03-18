@@ -19,30 +19,30 @@ const Socials = (props) => {
       <ul className="iconList">
         <li className="icons">
           <Link
-            to={props.fblink}
+            to='https://www.facebook.com/emma.hollows.design'
             target="_blank"
             alt="facebook"
-            aria-label="follow us on facebook"
+            aria-label="follow me on facebook"
           >
             <FontAwesomeIcon icon={faFacebook} alt="facebook" color="var(--secondary)" />
           </Link>
         </li>
         <li className="icons">
           <Link
-            to={props.lilink}
+            to='https://www.linkedin.com/in/emmalouisehollows/'
             target="_blank"
             alt="LinkedIn"
-            aria-label="link with us on LinkedIn"
+            aria-label="link with me on LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedin} alt="LinkedIn" color="var(--secondary)" />
           </Link>
         </li>
         <li className="icons">
           <Link
-            to={props.instalink}
+            to='https://www.instagram.com/emma.hollows.design/'
             target="_blank"
             alt="Instagram"
-            aria-label="follow us on instagram"
+            aria-label="follow me on instagram"
           >
             <FontAwesomeIcon icon={faSquareInstagram} alt="Instagram Link" color="var(--secondary)" />
           </Link>
