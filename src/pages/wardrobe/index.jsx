@@ -3,68 +3,16 @@ import useScrollStates from '../../components/scrollState';
 import Testimonials from '../../components/testimonials';
 import FeaturedWork from '../../components/cards/featuredWork';
 import Button from '../../components/button';
-import maker from '../../assets/images/home-hero.webp';
-const cardsData = [
-  {
-    frontImage: '',
-    backImage: '',
-    title: 'The Tina Turn Musical',
-    description: 'Principal Dresser to Tina',
-    viewLink: '/tina-turner-musical'
-  },
-//   {
-//     frontImage: sophiatown,
-//     backImage: sophiatown2,
-//     title: 'Sophia Town',
-//     description: 'Costume Designer, Milliner, Dyer, Stitcher',
-//     viewLink: '/sophiatown'
-//   },
-//   {
-//     frontImage: snowflakes,
-//     backImage: snowflakes2,
-//     title: 'Snowflakes',
-//     description: 'Costume Designer',
-//     viewLink: '/snowflakesumass-rand-theatre'
-//   },
-//   {
-//     frontImage: rent,
-//     backImage: rent2,
-//     title: 'Rent',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/rent-adc-theatre-uk'
-//   },
-//   {
-//     frontImage: cadava,
-//     backImage: cadava2,
-//     title: 'Cadaver Exquisito ',
-//     description: 'Costume Designer',
-//     viewLink: '/cadaver-esquisito-umass-amherst'
-//   },
-//   {
-//     frontImage: copenhagen,
-//     backImage: copenhagen2,
-//     title: 'Copenhagen',
-//     description: 'Costume Designer',
-//     viewLink: '/rcopenhagen-corpus-playroom-uk'
-//   },
-//   {
-//     frontImage: tpatp,
-//     backImage: tpatp2,
-//     title: 'The Princess and the Pea',
-//     description: 'Costume Designer and Wardrobe Mistress',
-//     viewLink: '/footlights-the-princess-and-the-peaadc-theatre'
-//   },
-//   {
-//     frontImage: footlights,
-//     backImage: footlights2,
-//     title: 'Footlights: The History of Everything',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/footlights-history-of-everything-adc-theatre-uk'
-//   },
-]
+import maker from '../../assets/images/tina2.webp';
+import useFirestoreData from '../../components/useFirestoreData';
+import LoadingSpinner from '../../components/loadingSpinner';
+
 
 const Wardrobe = () => {
-    const { second, third } = useScrollStates();
+  const { second, third } = useScrollStates();
+  const { cardsData, loading, error } = useFirestoreData('wardrobe');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div>Error: {error}</div>;
   return (
     <div className='wardrobe-page'>
        <section className="hero">
