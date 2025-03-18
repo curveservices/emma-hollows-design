@@ -1,0 +1,122 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 6rem 2rem;
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        gap: 0.5rem;
+        .portrait-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 100%;
+        }
+    }
+    .contact-form {
+        width: 50%;
+        padding: 2rem;
+        border-radius: 5px;
+        animation: fadeInUp 1.5s;
+        cursor: pointer;
+        .form-group {
+            position: relative;
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                position: absolute;
+                top: -10px;
+                left: 1px;
+                padding: 0 5px;
+                font-size: 0.9rem;
+                color: var(--secondary);
+                background: #000;
+                border-radius: 0px;
+                z-index: 999;
+                opacity: 0;
+                animation: fadeInUp 1s 1s forwards;
+                clear: both;
+            }
+
+            input,
+            select,
+            textarea {
+                max-width: 100%;
+                padding: 10px;
+                border: 1px solid var(--primary);
+                background: #000;
+                border-radius: 5px;
+                font-size: 1rem;
+                color: #fff;
+                animation: fadeInUp 1s 0.5s backwards;
+                clear: both;
+                &:focus {
+                    outline: none;
+                        border: none;
+                    }
+            }
+        }
+
+        .btn-container {
+            align-self: flex-start;
+            .submit-button {
+                text-transform: uppercase;
+                background: #000;
+                color: #fff;
+                letter-spacing: 4px;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 1rem;
+                border-radius: 5px;
+                border: none;
+                min-width: fit-content;
+                box-shadow: var(--button-shadow);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    background: var(--secondary);
+                    color: #000;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-page {
+        flex-direction: column;
+        text-align: center;
+        padding: 8rem 2rem 0;
+        .hero-left {
+            width: 100%;
+            align-items: center;
+            gap: 1rem;
+            .portrait-image {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        .contact-form {
+            width: 100%;
+            padding: 2rem 0;
+            .form-group {
+                label {
+                    font-size: 0.8rem;
+                }
+                input,
+                select,
+                textarea {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
