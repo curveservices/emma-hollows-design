@@ -91,12 +91,13 @@ const Navbar = () => {
             </div>
           </NavLink>
           <Button
-          text="Contact Me"
-          link="/contact"
-          background="var(--secondary)"
-          color="#000"
-          boxShadow="none"
-        />
+            text="Contact Me"
+            link="/contact"
+            background="var(--secondary)"
+            color="#000"
+            boxShadow="none"
+            onClick={() => setShowNav(false)}
+          />
         </nav>
          <MenuToggle showNav={showNav} setShowNav={setShowNav} />
       </header>

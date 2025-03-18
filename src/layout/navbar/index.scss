@@ -64,7 +64,9 @@ header {
       width: 100%;
       background: var(--primary);
       z-index: 9999;
-
+      .active {
+        border-bottom: none;
+      }
       .desktop-icon {
         display: none;
       }
