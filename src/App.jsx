@@ -16,6 +16,8 @@ import Maker from "./pages/maker/index.jsx";
 import Wardrobe from "./pages/wardrobe/index.jsx";
 import Film from "./pages/film/index.jsx";
 import "./App.scss";
+import CV from "./pages/cv/index.jsx";
+import Contact from "./pages/contact/index.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -37,6 +39,18 @@ const router = createBrowserRouter(
         <Route path="portfolio" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Portfolio/>
+          </Suspense>
+        }
+        />
+        <Route path="cv" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <CV/>
+          </Suspense>
+        }
+        />
+        <Route path="contact" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Contact/>
           </Suspense>
         }
         />
