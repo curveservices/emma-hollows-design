@@ -1,0 +1,15 @@
+.image-gallery {
+    max-width: 70%;
+    margin: 4rem auto;
+}
+
+.image-gallery-slide img {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.image-gallery-thumbnail img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
