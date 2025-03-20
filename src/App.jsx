@@ -18,6 +18,7 @@ import Film from "./pages/film/index.jsx";
 import "./App.scss";
 import CV from "./pages/cv/index.jsx";
 import Contact from "./pages/contact/index.jsx";
+import GalleryPage from "./pages/galleryPage/index.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -54,29 +55,35 @@ const router = createBrowserRouter(
           </Suspense>
         }
         />
-        <Route path=":id/designer" element={
+        <Route path="designer" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Designer/>
           </Suspense>
         }
         />
-        <Route path=":id/maker" element={
+        <Route path="/maker" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Maker />
           </Suspense>
         }
         />
-        <Route path=":id/wardrobe" element={
+        <Route path="/wardrobe" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Wardrobe />
           </Suspense>
         }
         />
-        <Route path=":id/film" element={
+        <Route path="/film" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Film/>
           </Suspense>
         }
+        />
+        
+        <Route path=":galleryID" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <GalleryPage />
+          </Suspense>}
         />
       </Route>
       <Route path="*" element={
