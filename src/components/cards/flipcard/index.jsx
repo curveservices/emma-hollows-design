@@ -1,9 +1,21 @@
 import React from 'react';
 import Button from '../../button';
+import { useNavigate } from 'react-router-dom';
 import './index.scss';
 
 const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWidth }) => {
+    const navigate = useNavigate();
     const cardStyle = cardWidth ? { '--card-width': cardWidth } : {};
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
+        if (viewLink.startsWith('/')) {
+            navigate(viewLink); 
+        } else {
+            window.location.href = viewLink;
+        }
+    };
     return (
         <div className="flip-card" style={cardStyle}>
             <div className="flip-card-inner">
@@ -32,6 +44,7 @@ const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWid
                             text="View"
                             link={viewLink}
                             background="var(--secondary)"
+                            onClick={handleClick}
                         />
                     </div>
                 </div>
