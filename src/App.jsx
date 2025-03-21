@@ -19,6 +19,8 @@ import "./App.scss";
 import CV from "./pages/cv/index.jsx";
 import Contact from "./pages/contact/index.jsx";
 import GalleryPage from "./pages/galleryPage/index.jsx";
+import "react-image-gallery/styles/css/image-gallery.css";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
