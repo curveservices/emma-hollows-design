@@ -49,7 +49,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    minify: "esbuild",
+    minify: false,
     modulePreload: true,
     chunkSizeWarningLimit: 1600,
     rollupOptions: {
@@ -63,5 +63,5 @@ export default defineConfig({
       },
     },
   },
-  define: { "process.env": process.env },
+  define: { "process.env": {} },
 });
