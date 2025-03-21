@@ -24,8 +24,11 @@
 
     &:hover .flip-card-inner {
         transform: rotateY(180deg);
+        .front-title {
+            display: none;
+        }
     }
-
+    
     .flip-card-front,
     .flip-card-back {
         position: absolute;
@@ -60,6 +63,11 @@
             height: 100px;
             width: 100%;
             z-index: 9999;
+        }
+        &:hover {
+            .front-title {
+                display: none;
+            }
         }
     }
 
