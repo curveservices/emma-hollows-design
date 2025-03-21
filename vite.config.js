@@ -24,6 +24,16 @@ export default defineConfig({
         "./src/**/*.{jsx,js,tsx,ts}",
         "./public/**/*.html",
       ],
+      safelist: {
+        standard: [
+          /^toast-.*$/,
+          "ReactToastify__toast",
+          "ReactToastify__toast-container",
+          "ReactToastify__toast-body",
+          "ReactToastify__progress-bar",
+          "load-spinner",
+        ],
+      },
     }),
     compression({
       algorithm: "gzip",
