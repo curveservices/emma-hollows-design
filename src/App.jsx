@@ -15,10 +15,11 @@ import Designer from "./pages/designer/index.jsx";
 import Maker from "./pages/maker/index.jsx";
 import Wardrobe from "./pages/wardrobe/index.jsx";
 import Film from "./pages/film/index.jsx";
-import "./App.scss";
 import CV from "./pages/cv/index.jsx";
 import Contact from "./pages/contact/index.jsx";
 import GalleryPage from "./pages/galleryPage/index.jsx";
+import "react-image-gallery/styles/css/image-gallery.css";
+import "./App.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
