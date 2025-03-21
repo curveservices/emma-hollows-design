@@ -5,8 +5,7 @@ import { db } from '../../../firebase.config';
 import { doc, getDoc } from 'firebase/firestore';
 import Button from '../../components/button';
 import ReactImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css"; 
-import './index.css';
+import './index.scss';
 
 const GalleryPage = () => {
     const { galleryID } = useParams();
