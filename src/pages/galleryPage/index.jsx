@@ -100,7 +100,7 @@ const GalleryPage = () => {
                       {galleryData.info}
                   </p>
               </div>
-              <ReactImageGallery items={galleryData.images} lazyLoad={true} autoPlay={true} />
+              <ReactImageGallery items={galleryData.images} />
           </section>
       
     </div>
