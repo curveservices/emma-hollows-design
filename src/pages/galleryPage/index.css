@@ -1,6 +1,22 @@
 .image-gallery {
-    max-width: 70%;
-    margin: 4rem auto;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 80% !important;
+    margin: auto !important;
+}
+
+.image-gallery-slide img {
+    max-width: 100% !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+}
+
+.image-gallery-thumbnails-container {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
 }
 
 .image-gallery-slide img {
