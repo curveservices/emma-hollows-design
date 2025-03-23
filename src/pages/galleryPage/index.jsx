@@ -98,7 +98,7 @@ const GalleryPage = () => {
                       {galleryData.info}
                   </p>
               </div>
-              <ReactImageGallery items={galleryData.images} />
+              <ReactImageGallery items={galleryData.images} autoPlay/>
           </section>
       
     </div>
