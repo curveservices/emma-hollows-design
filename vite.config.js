@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import compression from "vite-plugin-compression";
-import purgecss from "vite-plugin-purgecss";
 // https://vite.dev/config/
 export default defineConfig({
   base: "/",
@@ -18,25 +17,17 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    purgecss({
-      content: ["./index.html", "./src/**/*.jsx"],
-      safelist: {
-        standard: [/^bg-/, /^text-/, /^border-/, /^hover:/, /^focus:/],
-        deep: [],
-        greedy: [],
-      },
-    }),
     compression({
       algorithm: "gzip",
       ext: ".gz",
       threshold: 10240,
-      filter: /\.(js|mjs|json|css|html|svg|ico|png|jpg|webp|woff|woff2)$/,
+      filter: /\.(js|mjs|json|css|scss|html|svg|ico|png|jpg|webp|woff|woff2)$/,
     }),
     compression({
       algorithm: "brotliCompress",
       ext: ".br",
       threshold: 10240,
-      filter: /\.(js|mjs|json|css|html|svg|ico|png|jpg|webp|woff|woff2)$/,
+      filter: /\.(js|mjs|json|css|scss|html|svg|ico|png|jpg|webp|woff|woff2)$/,
     }),
   ],
   build: {
