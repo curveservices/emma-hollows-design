@@ -18,23 +18,27 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    // purgecss({
-    //   content: [
-    //     "./index.html",
-    //     "./src/**/*.{jsx,js,tsx,ts}",
-    //     "./public/**/*.html",
-    //   ],
-    //   safelist: {
-    //     standard: [
-    //       /^toast-.*$/,
-    //       "ReactToastify__toast",
-    //       "ReactToastify__toast-container",
-    //       "ReactToastify__toast-body",
-    //       "ReactToastify__progress-bar",
-    //       "load-spinner",
-    //     ],
-    //   },
-    // }),
+    purgecss({
+      content: [
+        "./index.html",
+        "./src/**/*.{jsx,js,tsx,ts}",
+        "./public/**/*.html",
+      ],
+      safelist: {
+         standard: [
+          /^toast-.*$/,
+          "ReactToastify__toast",
+          "ReactToastify__toast-container",
+          "ReactToastify__toast-body",
+          "ReactToastify__progress-bar",
+          "load-spinner",
+          "image-gallery",
+          "image-gallery-slide",
+          "image-gallery-thumbnails",
+          "image-gallery-content",
+        ],
+      },
+    }),
     compression({
       algorithm: "gzip",
       ext: ".gz",
