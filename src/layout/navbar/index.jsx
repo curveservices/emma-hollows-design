@@ -11,7 +11,6 @@ import {
 
 import Button from "../../components/button";
 import logo from "../../assets/images/logo1.png";
-import Breadcrumbs from "../../components/breadcrumbs";
 import "./index.scss";
 import MenuToggle from "../../components/menuToggle";
 
@@ -44,7 +43,6 @@ const Navbar = () => {
             className="logo"
           />
         </NavLink>
-        <Breadcrumbs className={scrolled ? "navbar-scroll" : ""} />
         <nav className={showNav ? "mobile-show" : ""}>
           <NavLink
             to="/"
