@@ -47,7 +47,6 @@ const Maker = () => {
                       The Nutcracker at the Royal Albert Hall in London; numerous productions at Shakespeare and Company in Massachusetts.
                   </p>
               </div>
-              <div className="subtitle" style={{textAlign:'center', paddingTop: '2rem'}}>Garments</div>
               <FeaturedWork cardWidth='400px' cardsData={cardsData}  />
           </section>
           <section className={`third-section ${third ? 'anim' : 'none'}`}>
