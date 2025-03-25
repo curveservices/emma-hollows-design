@@ -41,7 +41,7 @@ const Home = () => {
           <FeaturedWork cardWidth='400px'/>
           <div className="btn-container">
             <Button
-              text='portfolio'
+              text='my portfolio'
               link='portfolio'
               background='var(--secondary)'
             />
