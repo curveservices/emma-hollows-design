@@ -22,7 +22,6 @@ const GalleryPage = () => {
                 const docSnap = await getDoc(docRef);
                 if (docSnap.exists()) {
                     const data = docSnap.data();
-                    console.log('Fetch Data', data);
                     let imagesArray = data.images || [];
 
                     const formattedImages = imagesArray.map(imgStr => {
@@ -42,8 +41,6 @@ const GalleryPage = () => {
                 }
                 return imgStr; // If it's already an object, return as-is
             }).filter(Boolean); // Remove null values if any parsing fails
-
-            console.log('Formatted Images:', formattedImages);
 
             setGalleryData({ ...data, images: formattedImages });
                 } else {
@@ -98,7 +95,7 @@ const GalleryPage = () => {
                       {galleryData.info}
                   </p>
               </div>
-              <ReactImageGallery items={galleryData.images} autoPlay/>
+              <ReactImageGallery items={galleryData.images} autoPlay />
           </section>
       
     </div>
