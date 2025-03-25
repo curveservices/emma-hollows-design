@@ -28,7 +28,7 @@ const defaultCardsData = [
     backImage: card3back,
     title: 'Heineken Jackets and Hats',
     description: 'Designer and Maker',
-    viewLink: '/heinken-jackets'
+    viewLink: '/heineken-jackets'
   },
 ];
 
