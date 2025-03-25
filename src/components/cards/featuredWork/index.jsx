@@ -14,21 +14,21 @@ const defaultCardsData = [
     backImage: card1back,
     title: 'Magic at the Musicals',
     description: 'Designer and Maker',
-    viewLink: '/magic-at-the-musicals'
+    viewLink: 'magic-at-the-musicals'
   },
   {
     frontImage: tina,
     backImage: card2back,
     title: 'Tina the musical',
     description: 'Principal Dresser to Tina',
-    viewLink: '/tina-turner-musical'
+    viewLink: 'tina-turner-musical'
   },
   {
     frontImage: sophie,
     backImage: card3back,
     title: 'Heineken Jackets and Hats',
     description: 'Designer and Maker',
-    viewLink: '/heineken-jackets'
+    viewLink: 'heineken-jackets'
   },
 ];
 
