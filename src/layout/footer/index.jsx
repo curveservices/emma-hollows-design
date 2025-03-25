@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-container">
           <ul className="site-links">
             <li>
-              <NavLink to='about-me'>About me</NavLink>
+              <NavLink to='about-me'>About</NavLink>
             </li>
             <li>
               <NavLink to='portfolio'>Portfolio</NavLink>
@@ -31,7 +31,7 @@ const Footer = () => {
               <NavLink to='cv'>My CV</NavLink>
             </li>
             <li>
-              <NavLink to='contact'>Contact me</NavLink>
+              <NavLink to='contact'>Contact</NavLink>
             </li>
           </ul>
         </div>
