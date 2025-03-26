@@ -56,10 +56,10 @@ const Navbar = () => {
             </NavLink>
             {showDropdown && (
               <div className="dropdown-menu">
-                <NavLink to="/designer" onClick={() => setShowDropdown(false)} className="dropdown-item">Designer</NavLink>
-                <NavLink to="/maker" onClick={() => setShowDropdown(false)} className="dropdown-item">Maker</NavLink>
-                <NavLink to="/wardrobe" onClick={() => setShowDropdown(false)} className="dropdown-item">Wardrobe</NavLink>
-                <NavLink to="/film" onClick={() => setShowDropdown(false)} className="dropdown-item">Film</NavLink>
+                <NavLink to="/designer" onClick={() => setShowDropdown(false) & setShowNav(false)} className="dropdown-item">Designer</NavLink>
+                <NavLink to="/maker" onClick={() => setShowDropdown(false) & setShowNav(false)} className="dropdown-item">Maker</NavLink>
+                <NavLink to="/wardrobe" onClick={() => setShowDropdown(false) & setShowNav(false)} className="dropdown-item">Wardrobe</NavLink>
+                <NavLink to="/film" onClick={() => setShowDropdown(false) & setShowNav(false)} className="dropdown-item">Film</NavLink>
               </div>
             )}
           </div>

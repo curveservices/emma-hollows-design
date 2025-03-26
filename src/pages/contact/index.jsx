@@ -41,7 +41,7 @@ const Contact = () => {
                         type="email"
                         name='email'
                         id='email'
-                        placeholder='email@exapmle.com'
+                        placeholder='email@example.com'
                         required
                   />
                 </div>

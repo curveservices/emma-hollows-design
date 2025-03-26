@@ -26,6 +26,10 @@ header {
     .active .menu-container {
         border-bottom: 2px solid var(--secondary); // Add border when active
     }
+    .text:hover {
+      color: var(--secondary);
+
+    }
     .dropdown {
       position: relative;
       display: inline-block;
@@ -85,7 +89,6 @@ header {
     .logo {
       display: none;
     }
-
     .mobile-logo {
       display: block;
       width: 100px;
@@ -127,7 +130,9 @@ header {
         height: 120vh;
         width: 100%;
         animation: bounceInRight 1s;
-
+        .active {
+          border-bottom: none;
+        }
         .text {
           font-size: 24px;
         }
@@ -137,6 +142,29 @@ header {
           align-items: center;
           gap: 40px;
           margin-top: 1rem;
+          border-bottom: none;
+        }
+      }
+      .dropdown {
+        width: 100%;
+        .dropdown-menu {
+          position: static;
+          background: none;
+          box-shadow: none;
+          display: flex;
+          flex-direction: column;
+          opacity: 1;
+          margin-left: 4rem;
+          visibility: visible;
+          max-height: none;
+        }
+        a {
+          padding: 0;
+        }
+        .dropdown-item {
+          padding: 0.5rem;
+          text-align: left;
+          width: 20%;
         }
       }
     }
