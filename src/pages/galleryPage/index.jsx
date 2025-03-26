@@ -91,7 +91,7 @@ const GalleryPage = () => {
               <div className="text-box">
                   <div className="subtitle">{galleryData.subtitle}</div>
                   <h2>{galleryData.galleryName}</h2>
-                  <p>
+                  <p className='info'>
                       {galleryData.info}
                   </p>
               </div>

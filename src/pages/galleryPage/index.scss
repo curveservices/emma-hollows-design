@@ -1,9 +1,11 @@
 .second-section {
-    margin-bottom: 5rem;
+    .info {
+        margin-bottom: 3rem;
+    }
 }
 .image-gallery-slide img {
     max-width: 100% !important;
-    max-height: 400px !important;
+    max-height: 500px !important;
     object-fit: contain !important;
 }
 
@@ -11,10 +13,6 @@
     &:hover {
         color: var(--secondary) !important;
     }
-}
-.image-gallery-slide img {
-    max-height: 400px;
-    object-fit: contain;
 }
 
 .image-gallery-thumbnail img {
