@@ -6,7 +6,6 @@
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  animation: fadeIn 2s forwards;
   .blur-left {
     position: absolute;
     top: 0vh;
@@ -39,7 +38,7 @@
   .wardrobe-page,
   .film-page,
   .gallery-page {
-     animation: fadeIn 1s 0.2s backwards;
+     animation: fadeIn 1s 0.5s backwards;
     h1 {
       margin: 0;
       font-size: 60px;
@@ -109,7 +108,7 @@
     }
 
     .second-section {
-      margin: 5rem 2rem;
+      margin: 5rem 3rem 6rem;
       padding: 0rem;
 
       .text-box {
