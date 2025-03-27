@@ -6,13 +6,14 @@ import Button from '../../components/button';
 import maker from '../../assets/images/tina2.webp';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
+import Helmet from '../../components/helmet';
 
 
 const Wardrobe = () => {
   const { second, third } = useScrollStates();
   const { cardsData, loading, error } = useFirestoreData('wardrobe');
   if (loading) return <LoadingSpinner />;
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <div className='error-message'>Error: {error}</div>;
   return (
     <div className='wardrobe-page'>
        <section className="hero">
@@ -53,6 +54,11 @@ const Wardrobe = () => {
           <section className={`third-section ${third ? 'anim' : 'none'}`}>
               <Testimonials />
           </section>
+           <Helmet
+          title="Wardrobe | London Costume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
     </div>
   )
 }
