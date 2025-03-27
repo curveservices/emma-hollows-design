@@ -4,11 +4,22 @@ import emma2 from '../../assets/images/emma2.webp';
 import Button from '../../components/button';
 import Socials from '../../components/socials';
 import useScrollStates from '../../components/scrollState';
+import Helmet from '../../components/helmet';
 import './index.scss';
 
 const About = () => {
-  const { second, third } = useScrollStates();
-
+  const { second } = useScrollStates();
+  const schemData = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "name": "Emma Hollows Desgin",
+    "url": "https://emmahollows.co.uk",
+    "description": "Costume designer, maker and supervisor for theatre and film in London.",
+    "author": {
+      "@type": "Person",
+      "name": "Emma Hollows"
+    }
+  };
   return (
     <div className='about-page'>
       <section className="about-hero">
@@ -73,6 +84,12 @@ const About = () => {
           />
         </div>
       </div>
+      <Helmet
+        title="About Me | London Custume Desgin for Theatre and Film"
+        description="I am a costume and set designer and maker currently working on London's West End"
+        keywords="West-end theatre, costume designer, costume maker, London, theatre"
+        schemaMarkup={schemData}
+      />
     </div>
   )
 }
