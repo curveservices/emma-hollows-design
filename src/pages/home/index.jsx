@@ -4,6 +4,7 @@ import hero from "../../assets/images/home-hero.webp";
 import FeaturedWork from "../../components/cards/featuredWork";
 import Testimonials from "../../components/testimonials";
 import useScrollStates from "../../components/scrollState";
+import Helmet from "../../components/helmet";
 
 const Home = () => {
   const { second, third } = useScrollStates();
@@ -50,6 +51,11 @@ const Home = () => {
         <section className={` ${third ? 'anim' : 'none'}`}>
           <Testimonials />
         </section>
+        <Helmet
+          title="Home | London Costume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
       </div>
       
     </>
