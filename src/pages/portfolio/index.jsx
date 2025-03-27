@@ -11,6 +11,7 @@ import film from '../../assets/images/film.webp';
 import card4back from '../../assets/images/mw2.webp';
 import './index.scss';
 import useScrollStates from '../../components/scrollState';
+import Helmet from '../../components/helmet';
 
 const cardsData = [
   {
@@ -84,6 +85,11 @@ const Portfolio = () => {
             <h2>Sketch books</h2>
           </div>
         </section>
+         <Helmet
+          title="Portfolio | London Costume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
       </div>
     </>
   )
