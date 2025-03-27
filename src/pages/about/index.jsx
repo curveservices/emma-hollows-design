@@ -85,7 +85,7 @@ const About = () => {
         </div>
       </div>
       <Helmet
-        title="About Me | London Custume Desgin for Theatre and Film"
+        title="About Me | London Costume Desgin for Theatre and Film"
         description="I am a costume and set designer and maker currently working on London's West End"
         keywords="West-end theatre, costume designer, costume maker, London, theatre"
         schemaMarkup={schemData}
