@@ -14,6 +14,7 @@ header {
   .logo {
     padding: 1rem;
     width: 12.5rem;
+    height: auto;
   }
   .mobile-logo {
     display: none;
@@ -24,7 +25,7 @@ header {
     gap: 3.75rem;
     color: white;
     .active .menu-container {
-        border-bottom: 2px solid var(--secondary); // Add border when active
+        border-bottom: 2px solid var(--secondary);
     }
     .text:hover {
       color: var(--secondary);
@@ -40,7 +41,7 @@ header {
         top: 100%;
         left: 0;
         background: var(--nav);
-        padding: 0; // Initially no padding
+        padding: 0;
         border-radius: 4px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         min-width: 150px;
@@ -53,10 +54,10 @@ header {
 
       &:hover .dropdown-menu,
       .dropdown-menu:hover {
-        max-height: 500px; // Enough to fully expand
+        max-height: 500px;
         opacity: 1;
         visibility: visible;
-        padding: 10px 0; // Add padding when open
+        padding: 10px 0;
       }
       a {
         display: block;
