@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
 import './index.scss';
+import Helmet from '../../components/helmet';
 
 const CV = () => {
   return (
@@ -346,6 +347,11 @@ const CV = () => {
       <div className='info'>
         Contact details available upon request.
       </div>
+       <Helmet
+          title="My CV | London Custume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
     </div>
   );
 };
