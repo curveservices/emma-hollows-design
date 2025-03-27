@@ -75,7 +75,7 @@ const Contact = () => {
             <Socials />
         </div>
         <Helmet
-          title="Contact Me | London Custume Desgin for Theatre and Film"
+          title="Contact Me | London Cuotume Desgin for Theatre and Film"
           description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
           keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
         />
