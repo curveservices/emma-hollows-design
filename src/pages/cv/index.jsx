@@ -348,7 +348,7 @@ const CV = () => {
         Contact details available upon request.
       </div>
        <Helmet
-          title="My CV | London Custume Desgin for Theatre and Film"
+          title="My CV | London Costume Desgin for Theatre and Film"
           description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
           keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
         />
