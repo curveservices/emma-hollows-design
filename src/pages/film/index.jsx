@@ -4,68 +4,15 @@ import Testimonials from '../../components/testimonials';
 import FeaturedWork from '../../components/cards/featuredWork';
 import Button from '../../components/button';
 import film from '../../assets/images/mw2.webp';
-
-const cardsData = [
-  {
-    frontImage: '',
-    backImage: '',
-    title: 'Bacchae',
-    description: 'Costume Designer, Draper, Dyer, Stitcher',
-    viewLink: '/bacchae-umass-amherst'
-  },
-//   {
-//     frontImage: sophiatown,
-//     backImage: sophiatown2,
-//     title: 'Sophia Town',
-//     description: 'Costume Designer, Milliner, Dyer, Stitcher',
-//     viewLink: '/sophiatown'
-//   },
-//   {
-//     frontImage: snowflakes,
-//     backImage: snowflakes2,
-//     title: 'Snowflakes',
-//     description: 'Costume Designer',
-//     viewLink: '/snowflakesumass-rand-theatre'
-//   },
-//   {
-//     frontImage: rent,
-//     backImage: rent2,
-//     title: 'Rent',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/rent-adc-theatre-uk'
-//   },
-//   {
-//     frontImage: cadava,
-//     backImage: cadava2,
-//     title: 'Cadaver Exquisito ',
-//     description: 'Costume Designer',
-//     viewLink: '/cadaver-esquisito-umass-amherst'
-//   },
-//   {
-//     frontImage: copenhagen,
-//     backImage: copenhagen2,
-//     title: 'Copenhagen',
-//     description: 'Costume Designer',
-//     viewLink: '/rcopenhagen-corpus-playroom-uk'
-//   },
-//   {
-//     frontImage: tpatp,
-//     backImage: tpatp2,
-//     title: 'The Princess and the Pea',
-//     description: 'Costume Designer and Wardrobe Mistress',
-//     viewLink: '/footlights-the-princess-and-the-peaadc-theatre'
-//   },
-//   {
-//     frontImage: footlights,
-//     backImage: footlights2,
-//     title: 'Footlights: The History of Everything',
-//     description: 'Costume Designer, Maker and Wardrobe Mistress',
-//     viewLink: '/footlights-history-of-everything-adc-theatre-uk'
-//   },
-]
+import useFirestoreData from '../../components/useFirestoreData';
+import LoadingSpinner from '../../components/loadingSpinner';
+import Helmet from '../../components/helmet';
 
 const Film = () => {
-    const { second, third } = useScrollStates();
+  const { second, third } = useScrollStates();
+  const { cardsData, loading, error } = useFirestoreData('film');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div className='error-message'>Error: {error}</div>
   return (
     <div className='film-page'>
        <section className="hero">
@@ -106,6 +53,11 @@ const Film = () => {
           <section className={`third-section ${third ? 'anim' : 'none'}`}>
               <Testimonials />
           </section>
+        <Helmet
+          title="Film | London Costume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
     </div>
   )
 }
