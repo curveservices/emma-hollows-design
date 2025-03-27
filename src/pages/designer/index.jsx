@@ -56,7 +56,7 @@ const Designer = () => {
         <Testimonials />
       </section>
        <Helmet
-          title="Designer | London Custume Desgin for Theatre and Film"
+          title="Designer | London Costume Desgin for Theatre and Film"
           description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
           keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
         />
