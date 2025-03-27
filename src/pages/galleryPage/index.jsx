@@ -6,6 +6,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import Button from '../../components/button';
 import ReactImageGallery from 'react-image-gallery';
 import './index.scss';
+import Helmet from '../../components/helmet';
 
 const GalleryPage = () => {
     const { galleryID } = useParams();
@@ -59,12 +60,12 @@ const GalleryPage = () => {
     }, [galleryID]);
 
     if (loading) return <LoadingSpinner />;
-    if (error || !galleryData) return <div className="error-message">Gallery not found.</div>;
+    if (error || !galleryData) return <div className="error-message"><h1>Gallery not found.</h1><Button link="/" text="Back to home" background="var(--secondary)"/></div>;
     
     
   return (
-      <div className='gallery-page'>
-          <section className="hero">
+        <div className='gallery-page'>
+            <section className="hero">
               <img
                   src={galleryData.heroImage} 
                   alt="Emma Hollows Design, designer, west-end London"
@@ -86,8 +87,8 @@ const GalleryPage = () => {
                     />
                 </div>
               </div>
-          </section>
-          <section className="second-section">
+            </section>
+            <section className="second-section">
               <div className="text-box">
                   <div className="subtitle">{galleryData.subtitle}</div>
                   <h2>{galleryData.galleryName}</h2>
@@ -96,10 +97,14 @@ const GalleryPage = () => {
                   </p>
               </div>
               <ReactImageGallery items={galleryData.images} autoPlay />
-          </section>
-      
-    </div>
-  )
+            </section>
+            <Helmet
+            title={`${galleryData.galleryName} | London Costume Desgin for Theatre and Film`}
+            description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+            keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+            />
+        </div>
+    )
 }
 
 export default GalleryPage
