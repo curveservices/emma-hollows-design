@@ -6,12 +6,13 @@ import FeaturedWork from '../../components/cards/featuredWork';
 import Testimonials from '../../components/testimonials';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
+import Helmet from '../../components/helmet';
 
 const Designer = () => {
   const { second, third } = useScrollStates();
   const {cardsData, loading, error} = useFirestoreData('designer');
   if (loading) return <LoadingSpinner />;
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <div className='error-message'>Error: {error}</div>;
 
   return (
     <div className='designer-page'>
@@ -54,6 +55,11 @@ const Designer = () => {
       <section className={`third-section ${third ? 'anim' : 'none'}`}>
         <Testimonials />
       </section>
+       <Helmet
+          title="Designer | London Custume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
     </div>
   )
 }
