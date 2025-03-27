@@ -1,15 +1,15 @@
 .container {
-  background-color: #202020;
+  background: #202020;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
   margin: 0em;
   overflow: hidden;
   height: 100vh;
+  color: var(--secondary);
+  font-family: "Proxima Nova";
+  text-transform: u;
   h1 {
-    color: red;
-    font-family: "Proxima Nova";
     padding-top: 2rem;
   }
   img {
