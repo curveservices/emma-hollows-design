@@ -8,9 +8,8 @@ footer {
     background: var(--primary);
     color: #fff;
     .footer-logo {
-        margin-right: 2rem;
-        width: 250px;
-        height: 60px;
+        width: 200px;
+        height: auto;
     }
     .footer-container {
         display: flex;
@@ -20,7 +19,7 @@ footer {
         .site-links {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 5rem;
             
         }
         li {
@@ -55,8 +54,8 @@ footer {
 @media screen and (max-width: 768px) {
     footer {
         .footer-logo {
-            width: 100px;
-            height: 31px;
+            width: 75px;
+            height: auto;
             margin: 0 0.5rem;
         }
         .footer-container {
