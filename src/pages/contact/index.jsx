@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emma from '../../assets/images/emma2.webp';
 import './index.scss';
 import Socials from '../../components/socials';
+import Helmet from '../../components/helmet';
 
 const Contact = () => {
     const refForm = useRef();
@@ -70,9 +71,14 @@ const Contact = () => {
                           <input type="submit" value="submit" className='submit-button' />
                       </div>
                 </div>
-              </form>
-              <Socials />
+            </form>
+            <Socials />
         </div>
+        <Helmet
+          title="Contact Me | London Custume Desgin for Theatre and Film"
+          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+        />
     </div>
   )
 }
