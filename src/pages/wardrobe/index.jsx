@@ -3,7 +3,7 @@ import useScrollStates from '../../components/scrollState';
 import Testimonials from '../../components/testimonials';
 import FeaturedWork from '../../components/cards/featuredWork';
 import Button from '../../components/button';
-import maker from '../../assets/images/tina2.webp';
+import maker from '../../assets/images/home-hero.webp';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
 import Helmet from '../../components/helmet';
