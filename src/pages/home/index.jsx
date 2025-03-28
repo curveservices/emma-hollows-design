@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../components/button";
-import hero from "../../assets/images/home-hero.webp";
+import hero from "../../assets/images/tina2.webp";
 import FeaturedWork from "../../components/cards/featuredWork";
 import Testimonials from "../../components/testimonials";
 import useScrollStates from "../../components/scrollState";
