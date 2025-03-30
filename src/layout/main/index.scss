@@ -1,4 +1,7 @@
 .app {
+  z-index: 0;
+    font-family: "Proxima Nova", sans-serif;
+    font-display: swap;
   .blurs {
       position: fixed;
       top: 0;
@@ -28,8 +31,6 @@
         background: var(--background-blur);
       }
     }
-  font-family: "Proxima Nova", sans-serif;
-  font-display: swap;
   .error-message {
       display: flex;
       flex-direction: column;
@@ -181,6 +182,9 @@
         .blur-right {
           right: 0vw;
           width: 60vw;
+        }
+        .blur-left, .blur-right {
+          filter: blur(80px);
         }
       }
     .home-page,
