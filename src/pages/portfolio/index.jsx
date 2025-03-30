@@ -12,8 +12,10 @@ import card4back from '../../assets/images/mw2.webp';
 import './index.scss';
 import useScrollStates from '../../components/scrollState';
 import Helmet from '../../components/helmet';
+import useFirestoreData from '../../components/useFirestoreData';
+import LoadingSpinner from '../../components/loadingSpinner';
 
-const cardsData = [
+const servicesData = [
   {
     frontImage: designer,
     backImage: portfolioHero,
@@ -45,6 +47,9 @@ const cardsData = [
 ];
 const Portfolio = () => {
   const { second, third } = useScrollStates();
+  const { cardsData, loading, error } = useFirestoreData('sketches');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div className="error-message">Error: {error}</div>
   return (
     <>
       <div className='portfolio-page'>
@@ -77,12 +82,14 @@ const Portfolio = () => {
               numerous productions at Shakespeare and Company in Massachusetts; and touring up the East Coast of the USA with The Cambridge American Stage Tour.
             </p>
           </div>
-          <FeaturedWork cardsData={cardsData} />
+          <FeaturedWork cardsData={servicesData} />
         </section>
         <section className={`third-section ${third ? "anim" : "none"}`}>
           <div className="text-box">
             <div className="subtitle">design sketches</div>
             <h2>Sketch books</h2>
+            <FeaturedWork cardWidth='400px' cardsData={cardsData} />
+            
           </div>
         </section>
          <Helmet
