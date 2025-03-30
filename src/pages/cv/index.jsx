@@ -24,6 +24,7 @@ const CV = () => {
               link='EmmaHollowsFullCostumeCV.pdf'
               text='Download my CV'
               background='var(--secondary)'
+              color="#000"
             />
           </div>
         </div>

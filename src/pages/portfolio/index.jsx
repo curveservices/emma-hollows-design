@@ -67,6 +67,7 @@ const Portfolio = () => {
                 text="work with me"
                 link="/contact"
                 background="var(--secondary)"
+                color="#000"
               />
               <Button text="find out About Me" link="/about-me" color="#fff" />
             </div>

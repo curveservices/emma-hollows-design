@@ -29,7 +29,8 @@ const Wardrobe = () => {
                     <Button
                         text="work with me"
                         link="/contact"
-                        background="var(--secondary)"
+                          background="var(--secondary)"
+                          color="#000"
                     />
                     <Button
                         text="My Portfolio"

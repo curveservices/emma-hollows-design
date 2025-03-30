@@ -25,6 +25,7 @@ const Home = () => {
                 text="work with me"
                 link="contact"
                 background="var(--secondary)"
+                color="#000"
               />
               <Button text="My Portfolio" link="portfolio" color="#fff" />
             </div>
