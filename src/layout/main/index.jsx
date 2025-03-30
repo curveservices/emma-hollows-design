@@ -27,11 +27,11 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div className="blurs">
+      <main className="app">
+        <div className="blurs">
         <div className="blur-left"></div>
         <div className="blur-right"></div>
       </div>
-      <main className="app">
         <Outlet />
       </main>
       {showButton && (
