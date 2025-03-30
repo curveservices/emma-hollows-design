@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <div className="home-page">
-        <section className="hero">
+        <div className="hero">
           <img
             src={hero}
             alt="Costume designer, West-end London"
@@ -29,8 +29,8 @@ const Home = () => {
               <Button text="My Portfolio" link="portfolio" color="#fff" />
             </div>
           </div>
-        </section>
-        <section className={`second-section ${second ? 'anim' : 'none'}`}>
+        </div>
+        <div className={`second-section ${second ? 'anim' : 'none'}`}>
         <div className="text-box">
           <div className="subtitle" style={{color:'var(--secondary)' }}>My portfolio</div>
             <h2>Latest Work</h2>
@@ -47,10 +47,10 @@ const Home = () => {
               background='var(--secondary)'
             />
           </div>
-        </section>
-        <section className={` ${third ? 'anim' : 'none'}`}>
+        </div>
+        <div className={` ${third ? 'anim' : 'none'}`}>
           <Testimonials />
-        </section>
+        </div>
         <Helmet
           title="Home | London Costume Desgin for Theatre and Film"
           description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
