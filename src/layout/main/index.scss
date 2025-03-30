@@ -176,6 +176,13 @@
 }
 @media screen and (max-width: 768px)  {
   .app {
+    .blurs {
+        position: sticky;
+        .blur-right {
+          right: 0vw;
+          width: 60vw;
+        }
+      }
     .home-page,
     .about-page,
     .portfolio-page,
