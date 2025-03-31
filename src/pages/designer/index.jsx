@@ -7,6 +7,7 @@ import Testimonials from '../../components/testimonials';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
 import Helmet from '../../components/helmet';
+import FlipBookGallery from '../../components/sketchBooks/flipBook';
 
 const Designer = () => {
   const { second, third } = useScrollStates();
@@ -52,6 +53,11 @@ const Designer = () => {
           </p>
         </div>
         <FeaturedWork cardWidth='400px' cardsData={cardsData} />
+        <div className="text-box">
+          <div className="subtitle">design sketches</div>
+          <h2>Sketch books</h2>
+          <FlipBookGallery/>
+        </div>
       </section>
       <section className={`third-section ${third ? 'anim' : 'none'}`}>
         <Testimonials />
