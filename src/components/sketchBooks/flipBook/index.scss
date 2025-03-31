@@ -1,23 +1,38 @@
-.flipbook-gallery {
+.gallery-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .flipbook-container {
   width: 320px;
   .title {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: -0rem;
-      background: var(--secondary);
       min-width: 320px;
-      height: 60px;
-      width: 100%;
+      padding-top: 0.5rem;
+      h3 {
+          margin: 0.25em;
+        }
+      .sketch-title {
+        margin: 0.25rem 0;
+        height: 60px;
+        text-transform: uppercase;
+        color: var(--secondary);
+      }
+      .sketch-info {
+        font-weight: 800;
+        color: #fff;
+        padding: 0.25rem;
+      }
+      .sketch-subtitle {
+        color: #fff;
+      }
     }
   cursor: pointer;
   .flip-page {
@@ -29,11 +44,15 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .flipbook-container {
-    margin-left: 1rem;
-    width: 200px;
-  }
+@media screen and (max-width: 768px) {  
+    .flipbook-container {
   
+    .title {
+      .sketch-title {
+        margin: 0.5rem 0;
+        height: initial;
+      }
+    }
+  }
 }
 

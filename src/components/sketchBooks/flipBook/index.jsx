@@ -4,16 +4,17 @@ import { db } from "../../../../firebase.config"; // Adjust path to your Firebas
 import { collection, getDocs } from "firebase/firestore";
 import "./index.scss";
 
-const FlipBook = ({ images, title }) => {
+const FlipBook = ({ images, title, info, subtitle }) => {
   return (
     <div className="flipbook-container">
       <FlipPage
         orientation="horizontal"
         showTouchHint
+        showSwipeHint
         flipOnTouch
         showHint
         flipOnTouchZone="20"
-        perspective="30em"
+        perspective="20em"
       >
         {images.map((url, index) => (
           <article key={index} className="flip-page">
@@ -21,7 +22,12 @@ const FlipBook = ({ images, title }) => {
           </article>
         ))}
       </FlipPage>
-      <h3 className="title">{title}</h3>
+      <div className="title">
+      <h3 className="sketch-title">{title}</h3>
+      <div className="sketch-subtitle">{subtitle}</div>
+      <div className="sketch-info">{info}</div>
+      </div>
+      
     </div>
   );
 };
@@ -36,7 +42,9 @@ const FlipBookGallery = () => {
       
       const bookData = booksSnapshot.docs.map(doc => ({
         images: doc.data().images,
-        title: doc.data().title || "Untitled Book"
+        title: doc.data().title,
+        info: doc.data().info,
+        subtitle: doc.data().subtitle
       }));
       setBooks(bookData);
     };
@@ -47,7 +55,7 @@ const FlipBookGallery = () => {
   return (
     <div className="gallery-container">
       {books.map((book, index) => (
-        <FlipBook key={index} images={book.images} title={book.title} />
+        <FlipBook key={index} images={book.images} title={book.title} info={book.info} subtitle={book.subtitle} />
       ))}
     </div>
   );
