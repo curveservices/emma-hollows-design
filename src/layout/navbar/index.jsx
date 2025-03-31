@@ -9,21 +9,21 @@ import "./index.scss";
 import MenuToggle from "../../components/menuToggle";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setScrolled(scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     setScrolled(scrollY > 100);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <>
-      <header className={scrolled ? "navbar-scroll" : ""}>
+      <header >
         <NavLink to="/" aria-label="home page">
           <div className="title-container">
             <img src={logo} alt="London theatre Costume design, wardrobe, maker and film" className="mobile-logo" />
