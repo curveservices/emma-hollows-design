@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import portfolioHero from '../../assets/images/portfolio-hero.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork'
@@ -83,7 +83,9 @@ const Portfolio = () => {
           <section className={`third-section ${third ? 'anim' : "none"}`}>
             <div className="text-box">
             <div className="subtitle">design sketches</div>
-            <h2>Sketch books</h2>
+              <h2>Sketch books</h2>
+              <p className="desktop-view">Click pages to flick through my design sketches</p>
+              <p className="mobile-view">Swipe pages to flick through my design sketches</p>
             <FlipBookGallery/>
           </div>
           </section>
