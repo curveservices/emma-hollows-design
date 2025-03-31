@@ -48,6 +48,7 @@ const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWid
                             text="View"
                             link={viewLink}
                             background="var(--secondary)"
+                            color='#000'
                             onClick={handleClick}
                         />
                     </div>
