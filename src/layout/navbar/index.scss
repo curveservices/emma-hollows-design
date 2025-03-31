@@ -25,10 +25,11 @@ header {
     gap: 3.75rem;
     color: white;
     .active .menu-container {
-        border-bottom: 2px solid var(--secondary);
+      border-bottom: 2px solid var(--secondary);
     }
     .text:hover {
       color: var(--secondary);
+      transition: all 0.3s ease-in-out;
 
     }
     .dropdown {
