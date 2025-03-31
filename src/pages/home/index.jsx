@@ -46,6 +46,7 @@ const Home = () => {
               text='my portfolio'
               link='portfolio'
               background='var(--secondary)'
+              color='#000'
             />
           </div>
         </div>
