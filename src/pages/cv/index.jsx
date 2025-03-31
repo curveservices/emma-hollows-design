@@ -21,10 +21,11 @@ const CV = () => {
           </span>
           <div className="btn-container">
             <Button
-              link='EmmaHollowsFullCostumeCV.pdf'
+              link='/public/EmmaHollowsFullCostumeCV.pdf'
               text='Download my CV'
               background='var(--secondary)'
               color="#000"
+              target='_blank'
             />
           </div>
         </div>
