@@ -9,11 +9,10 @@ import wardrobe from '../../assets/images/home-hero.webp';
 import card3back from '../../assets/images/tina2.webp';
 import film from '../../assets/images/film.webp';
 import card4back from '../../assets/images/mw2.webp';
-import './index.scss';
 import useScrollStates from '../../components/scrollState';
 import Helmet from '../../components/helmet';
-import useFirestoreData from '../../components/useFirestoreData';
-import LoadingSpinner from '../../components/loadingSpinner';
+import FlipBookGallery from '../../components/sketchBooks/flipBook';
+import './index.scss';
 
 const servicesData = [
   {
@@ -47,9 +46,6 @@ const servicesData = [
 ];
 const Portfolio = () => {
   const { second, third } = useScrollStates();
-  const { cardsData, loading, error } = useFirestoreData('sketches');
-  if (loading) return <LoadingSpinner />;
-  if (error) return <div className="error-message">Error: {error}</div>
   return (
     <>
       <div className='portfolio-page'>
@@ -84,14 +80,13 @@ const Portfolio = () => {
             </p>
           </div>
           <FeaturedWork cardsData={servicesData} />
-        </section>
-        <section className={`third-section ${third ? "anim" : "none"}`}>
-          <div className="text-box">
+          <section className={`third-section ${third ? 'anim' : "none"}`}>
+            <div className="text-box">
             <div className="subtitle">design sketches</div>
             <h2>Sketch books</h2>
-            <FeaturedWork cardWidth='400px' cardsData={cardsData} />
-            
+            <FlipBookGallery/>
           </div>
+          </section>
         </section>
          <Helmet
           title="Portfolio | London Costume Desgin for Theatre and Film"
