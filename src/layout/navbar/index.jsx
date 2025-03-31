@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={scrolled ? "navbar-scroll" : ""}>
+      <header className={scrolled ? "navbar-scroll navbar-hidden" : ""}>
         <NavLink to="/" aria-label="home page">
           <div className="title-container">
             <img src={logo} alt="London theatre Costume design, wardrobe, maker and film" className="mobile-logo" />

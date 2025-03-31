@@ -68,14 +68,23 @@ header {
 
         &.dropdown-item:hover {
           background: var(--secondary);
+          color: #000;
         }
       }
     }
   }
 }
 .navbar-scroll {
-  display: none;
-  transition: all 3s ease-out;
+  opacity: 1;
+  visibility: visible;
+  transition: 
+    opacity 0.3s ease-in-out, 
+    visibility 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .mobile-icon,
