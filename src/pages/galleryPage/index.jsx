@@ -5,8 +5,8 @@ import { db } from '../../../firebase.config';
 import { doc, getDoc } from 'firebase/firestore';
 import Button from '../../components/button';
 import ReactImageGallery from 'react-image-gallery';
-import './index.scss';
 import Helmet from '../../components/helmet';
+import './index.scss';
 
 const GalleryPage = () => {
     const { galleryID } = useParams();
@@ -28,7 +28,6 @@ const GalleryPage = () => {
                     const formattedImages = imagesArray.map(imgStr => {
                 if (typeof imgStr === 'string') {
                     try {
-                        // Convert the string to an object manually
                         const obj = {};
                         imgStr.split(', ').forEach(pair => {
                             const [key, value] = pair.split(': ');
@@ -40,8 +39,8 @@ const GalleryPage = () => {
                         return null;
                     }
                 }
-                return imgStr; // If it's already an object, return as-is
-            }).filter(Boolean); // Remove null values if any parsing fails
+                return imgStr; 
+            }).filter(Boolean);
 
             setGalleryData({ ...data, images: formattedImages });
                 } else {
