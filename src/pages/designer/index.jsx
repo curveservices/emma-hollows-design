@@ -53,11 +53,6 @@ const Designer = () => {
           </p>
         </div>
         <FeaturedWork cardWidth='400px' cardsData={cardsData} />
-        <div className="text-box">
-          <div className="subtitle">design sketches</div>
-          <h2>Sketch books</h2>
-          <FlipBookGallery/>
-        </div>
       </section>
       <section className={`third-section ${third ? 'anim' : 'none'}`}>
         <Testimonials />
