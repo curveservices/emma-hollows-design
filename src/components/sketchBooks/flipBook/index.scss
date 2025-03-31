@@ -8,11 +8,21 @@
 }
 
 .flipbook-container {
-  width: 400px;
+  width: 320px;
+  .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -0rem;
+      background: var(--secondary);
+      min-width: 320px;
+      height: 60px;
+      width: 100%;
+    }
   cursor: pointer;
   .flip-page {
     .flip-image {
-        width: 300px;
+        width: 320px;
         height: auto;
         object-fit: contain;
         padding-top: 2rem;

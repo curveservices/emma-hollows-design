@@ -3,6 +3,7 @@ import FlipPage from "react-flip-page";
 import { db } from "../../../../firebase.config"; // Adjust path to your Firebase config
 import { collection, getDocs } from "firebase/firestore";
 import "./index.scss";
+
 const FlipBook = ({ images, title }) => {
   return (
     <div className="flipbook-container">
@@ -17,10 +18,10 @@ const FlipBook = ({ images, title }) => {
         {images.map((url, index) => (
           <article key={index} className="flip-page">
             <img src={url} alt={`Page ${index + 1}`} className="flip-image" />
-            <div className="title">{title}</div>
           </article>
         ))}
       </FlipPage>
+      <h3 className="title">{title}</h3>
     </div>
   );
 };
@@ -33,7 +34,10 @@ const FlipBookGallery = () => {
       const booksCollection = collection(db, "sketchbooks");
       const booksSnapshot = await getDocs(booksCollection);
       
-      const bookData = booksSnapshot.docs.map(doc => doc.data().images);
+      const bookData = booksSnapshot.docs.map(doc => ({
+        images: doc.data().images,
+        title: doc.data().title || "Untitled Book"
+      }));
       setBooks(bookData);
     };
 
@@ -42,13 +46,14 @@ const FlipBookGallery = () => {
 
   return (
     <div className="gallery-container">
-      {books.map(( images, index) => (
-           <FlipBook key={index} images={images} />
+      {books.map((book, index) => (
+        <FlipBook key={index} images={book.images} title={book.title} />
       ))}
     </div>
   );
 };
 
 export default FlipBookGallery;
+
 
 
