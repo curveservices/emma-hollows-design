@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FlipPage from "react-flip-page";
-import { db } from "../../../../firebase.config"; // Adjust path to your Firebase config
+import { db } from "../../../firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 import "./index.scss";
 
