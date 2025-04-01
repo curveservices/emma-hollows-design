@@ -11,7 +11,7 @@ import film from '../../assets/images/film.webp';
 import card4back from '../../assets/images/mw2.webp';
 import useScrollStates from '../../components/scrollState';
 import Helmet from '../../components/helmet';
-import FlipBookGallery from '../../components/sketchBooks/flipBook';
+import FlipBookGallery from '../../components/sketchBooks';
 import './index.scss';
 
 const servicesData = [
@@ -84,8 +84,8 @@ const Portfolio = () => {
             <div className="text-box">
             <div className="subtitle">design sketches</div>
               <h2>Sketch books</h2>
-              <p className="desktop-view">Click pages to flick through my design sketches</p>
-              <p className="mobile-view">Swipe pages to flick through my design sketches</p>
+              <p className="desktop-view">Click the pages to flick through my design sketches</p>
+              <p className="mobile-view">Swipe the pages to flick through my design sketches</p>
             <FlipBookGallery/>
           </div>
           </section>
