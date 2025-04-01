@@ -93,6 +93,11 @@ const GalleryPage = () => {
                   <h2>{galleryData.galleryName}</h2>
                   <p className='info'>
                       {galleryData.info}
+                      {galleryData.link &&
+                          <a href={galleryData.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--secondary)' }}>
+                              view here
+                        </a>
+                      }
                   </p>
               </div>
               <ReactImageGallery items={galleryData.images} autoPlay />
