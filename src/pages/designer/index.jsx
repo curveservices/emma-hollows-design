@@ -7,7 +7,6 @@ import Testimonials from '../../components/testimonials';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
 import Helmet from '../../components/helmet';
-import FlipBookGallery from '../../components/sketchBooks/flipBook';
 
 const Designer = () => {
   const { second, third } = useScrollStates();
