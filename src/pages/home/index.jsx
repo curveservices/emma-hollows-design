@@ -5,9 +5,14 @@ import FeaturedWork from "../../components/cards/featuredWork";
 import Testimonials from "../../components/testimonials";
 import useScrollStates from "../../components/scrollState";
 import Helmet from "../../components/helmet";
+import useFirestoreData from "../../components/useFirestoreData";
+import LoadingSpinner from "../../components/loadingSpinner";
 
 const Home = () => {
   const { second, third } = useScrollStates();
+  const {cardsData, loading, error} = useFirestoreData('featured');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div className='error-message'>Error: {error}</div>;
   return (
     <>
       <div className="home-page">
@@ -32,15 +37,15 @@ const Home = () => {
           </div>
         </div>
         <div className={`second-section ${second ? 'anim' : 'none'}`}>
-        <div className="text-box">
-          <div className="subtitle" style={{color:'var(--secondary)' }}>My portfolio</div>
+          <div className="text-box">
+            <div className="subtitle" style={{color:'var(--secondary)' }}>My portfolio</div>
             <h2>Latest Work</h2>
             <p>As a designer I am very research driven: establishing a solid foundation of research helps
               me to create a rich and dynamic world on stage or screen. I love to share this research with
               the other members of my design team and the actors, to bounce ideas around and hear what discoveries
               they have made in their own research, which all informs my costume designs.</p>
           </div>
-          <FeaturedWork cardWidth='400px'/>
+          <FeaturedWork cardsData={cardsData} cardWidth='400px'/>
           <div className="btn-container">
             <Button
               text='my portfolio'
