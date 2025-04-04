@@ -1,12 +1,11 @@
 .about-page {
     padding: 8rem 6rem 0;
-    .anim {
-        animation: fadeIn 1.5s forwards;
-    }
     .portrait-image {
         width: 350px;
         height: 350px;
         border-radius: 100%;
+        border: 1px solid #c6afff9a;
+        box-shadow: 0 0 15px 5px #c6afff59;
     }
     .mobile-view {
         display: none;
