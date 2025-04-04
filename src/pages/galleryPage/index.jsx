@@ -78,6 +78,7 @@ const GalleryPage = () => {
                         text="work with me"
                         link="/contact"
                         background="var(--secondary)"
+                        color='#000'
                     />
                     <Button
                         text="My Portfolio"
