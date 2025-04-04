@@ -9,10 +9,14 @@ import useFirestoreData from '../../components/useFirestoreData';
 import Helmet from '../../components/helmet';
 
 const Maker = () => {
-  const { second, third } = useScrollStates();
-  const {cardsData, loading, error} = useFirestoreData('maker');
-  if (loading) return <LoadingSpinner />;
-  if (error) return <div className='error-message'>Error: {error}</div>;
+    const { second, third } = useScrollStates();
+    
+    const { cardsData: makerData, loading: loadingMaker, error: makerError } = useFirestoreData('maker');
+    const { cardsData: millineryData, loading: loadingMillinery, error: millineryError } = useFirestoreData('millinery');
+    const { cardsData: masksData, loading: loadingMasks, error: masksError } = useFirestoreData('masks');
+    const { cardsData: otherData, loading: loadingOther, error: otherError} = useFirestoreData('other');
+    if (loadingMaker || loadingMillinery || loadingMasks || loadingOther) return <LoadingSpinner />;
+    if (makerError || millineryError || masksError || otherError) return <div className='error-message'>Error: {makerError || millineryError || masksError || otherError}</div>;
   return (
     <div className='maker-page'>
         <section className="hero">
@@ -49,7 +53,19 @@ const Maker = () => {
                       The Nutcracker at the Royal Albert Hall in London; numerous productions at Shakespeare and Company in Massachusetts.
                   </p>
               </div>
-              <FeaturedWork cardWidth='400px' cardsData={cardsData}  />
+              <FeaturedWork cardWidth='300px' cardsData={makerData} />
+              <div className="text-box">
+                  <div className="subtitle">Millinery</div>
+              </div>
+              <FeaturedWork cardWidth='400px' cardsData={millineryData} />
+              <div className="text-box">
+                  <div className="subtitle">Masks</div>
+              </div>
+              <FeaturedWork cardWidth='400px' cardsData={masksData} />
+              <div className="text-box">
+                  <div className="subtitle">Other</div>
+              </div>
+              <FeaturedWork cardWidth='400px' cardsData={otherData} />
           </section>
           <section className={`third-section ${third ? 'anim' : 'none'}`}>
               <Testimonials />
