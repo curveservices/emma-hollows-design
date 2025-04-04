@@ -17,7 +17,7 @@ const CV = () => {
             Email: <a href="mailto:emma@emmahollows.co.uk">emma@emmahollows.co.uk</a>
           </span>
           <span>
-            <a href="tel:0791 689 6013"></a>+44 791 689 6013
+            Phone: <a href="tel:0791 689 6013" aria-label='phone number'></a>+44 791 689 6013
           </span>
           <div className="btn-container">
             <Button
