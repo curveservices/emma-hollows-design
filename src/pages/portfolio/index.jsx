@@ -1,51 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import portfolioHero from '../../assets/images/portfolio-hero.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork'
-import designer from '../../assets/images/designer.webp';
-import maker from '../../assets/images/bodice.webp';
-import card2back from '../../assets/images/bodice1.webp';
-import wardrobe from '../../assets/images/home-hero.webp';
-import card3back from '../../assets/images/tina2.webp';
-import film from '../../assets/images/film.webp';
-import card4back from '../../assets/images/mw2.webp';
 import useScrollStates from '../../components/scrollState';
 import Helmet from '../../components/helmet';
 import FlipBookGallery from '../../components/sketchBooks';
+import LoadingSpinner from '../../components/loadingSpinner';
+import useFirestoreData from '../../components/useFirestoreData';
 import './index.scss';
 
-const servicesData = [
-  {
-    frontImage: designer,
-    backImage: portfolioHero,
-    title: 'Designer',
-    description: 'Designer Supervisor Maker',
-    viewLink: 'designer'
-  },
-  {
-    frontImage: maker,
-    backImage: card2back,
-    title: 'Maker',
-    description: 'Designer Supervisor Maker',
-    viewLink: 'maker'
-  },
-  {
-    frontImage: wardrobe,
-    backImage: card3back,
-    title: 'Wardrobe',
-    description: 'Designer Supervisor Maker',
-    viewLink: 'wardrobe'
-  },
-  {
-    frontImage: film,
-    backImage: card4back,
-    title: 'Film',
-    description: 'Designer Supervisor Maker',
-    viewLink: 'film'
-  },
-];
 const Portfolio = () => {
   const { second, third } = useScrollStates();
+  const { cardsData, loading, error } = useFirestoreData('portfolio');
+  if (loading) return <LoadingSpinner />;
+  if (error) return <div className='error-message'>Error: {error}</div>
   return (
     <>
       <div className='portfolio-page'>
@@ -79,7 +47,7 @@ const Portfolio = () => {
               numerous productions at Shakespeare and Company in Massachusetts; and touring up the East Coast of the USA with The Cambridge American Stage Tour.
             </p>
           </div>
-          <FeaturedWork cardsData={servicesData} />
+          <FeaturedWork cardsData={cardsData} cardWidth='300px' />
           <section className={`third-section ${third ? 'anim' : "none"}`}>
             <div className="text-box">
             <div className="subtitle">design sketches</div>
