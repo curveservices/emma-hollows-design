@@ -53,7 +53,7 @@ const Maker = () => {
                       The Nutcracker at the Royal Albert Hall in London; numerous productions at Shakespeare and Company in Massachusetts.
                   </p>
               </div>
-              <FeaturedWork cardWidth='300px' cardsData={makerData} />
+              <FeaturedWork cardWidth='400px' cardsData={makerData} />
               <div className="text-box">
                   <div className="subtitle">Millinery</div>
               </div>
@@ -61,7 +61,7 @@ const Maker = () => {
               <div className="text-box">
                   <div className="subtitle">Masks</div>
               </div>
-              <FeaturedWork cardWidth='400px' cardsData={masksData} />
+              <FeaturedWork cardWidth='300px' cardsData={masksData} />
               <div className="text-box">
                   <div className="subtitle">Other</div>
               </div>
