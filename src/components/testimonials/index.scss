@@ -114,6 +114,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .testimonial-container {
+    padding: 0;
+  }
   .testimonial {
       padding: 1rem;
     .job {
@@ -123,6 +126,11 @@
       font-size: 12px;
     }
   }
+    .slick-slider {
+      .slick-dots {
+        bottom: -2.25rem;
+      }
+    }
   .testimonial-modal {
     width: 400px;
   }
