@@ -24,7 +24,7 @@
         position: absolute;
         top: 80vh;
         right: -40vw;
-        width: 90vw;
+        width: 80vw;
         height: 60vh;
         filter: blur(150px);
         background: var(--background-blur);
@@ -49,7 +49,7 @@
   .film-page,
   .gallery-page,
   .policiy-page {
-     animation: fadeIn 0.5s backwards;
+     animation: fadeIn 1s backwards;
      
     h1 {
       margin: 0;
@@ -74,6 +74,18 @@
       font-size: 18px;
       letter-spacing: 1%;
       color: #fff;
+      animation: fadeInUp 2s backwards;
+      
+        &:nth-of-type(2) {
+          animation-delay: 0.5s;
+        }
+      
+        &:nth-of-type(3) {
+          animation-delay: 1s;
+        }
+    }
+    span {
+      animation: fadeInUp 1s backwards;
     }
     .subtitle {
       font-family: "Avenir Next";
@@ -82,12 +94,14 @@
       font-weight: 500;
       letter-spacing: 4.5px;
       color: var(--secondary);
+      animation: fadeInUp 1s forwards;
     }
     .btn-container {
       display: flex;
       justify-content: center;
       margin-top: 1rem;
       gap: 2rem;
+      animation: fadeInUp 1s forwards;
     }
     .hero {
       display: grid;
@@ -109,6 +123,18 @@
         opacity: 0.5;
         z-index: -1;
         object-fit: cover;
+      }
+      .socials {
+        display: flex;
+          justify-content: end;
+          position: relative;
+          margin-right: 4rem; 
+          z-index: 1;
+          .iconList {
+            flex-direction: column;
+            padding-bottom: 0rem;
+            animation: fadeInRight 2s forwards !important;
+          }
       }
 
       .text-box {
@@ -134,7 +160,6 @@
     }
     .anim {
       animation: fadeIn 1.5s forwards;
-
       .card-container {
         .flip-card {
           animation: fadeInUp 1s backwards;
@@ -211,6 +236,18 @@
       }
       .subtitle {
         font-size: 18px;
+      }
+      .hero {
+        .socials {
+            align-items: end;
+            justify-content: center;
+            bottom: 25%;
+            margin: 0;
+            .iconList {
+              flex-direction: row;
+              
+            }
+          }
       }
       .second-section {
         margin: 2rem;
