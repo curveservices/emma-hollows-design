@@ -32,7 +32,6 @@ const TestimonialCard = ({ testimonial }) => {
       <div
         className="text-container"
         ref={textRef}
-        // If the text is long, restrict the visible height
         style={showReadMore ? { maxHeight: '200px', overflow: 'hidden' } : {}}
       >
         <p className="text">{testimonial.text}</p>
