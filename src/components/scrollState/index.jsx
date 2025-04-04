@@ -7,7 +7,7 @@ const useScrollStates = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setSecond(scrollY > 150);
+      setSecond(scrollY > 100);
       setThird(scrollY > 1200);
     };
 
