@@ -75,6 +75,9 @@
         transform: rotateY(180deg);
         padding: 4rem 1rem;
         position: relative;
+        .front-title {
+            display: none;
+        }
 
         .card-back-image {
             position: absolute;
