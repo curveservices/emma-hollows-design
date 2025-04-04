@@ -8,7 +8,7 @@ header {
   z-index: 1000;
   font-family: "Proxima Nova", sans-serif;
   font-size: 18px;
-  padding: 0rem 2.5rem 0;
+  padding: 0rem 4rem 0;
   background-color: var(--nav);
   transition: all 2s ease;
   cursor: pointer;
@@ -97,7 +97,7 @@ header {
 @media screen and (max-width: 1024px) {
   header {
     padding: 0rem 1rem;
-    background: var(--primary);
+    background: var(--nav);
     .logo {
       display: none;
     }
@@ -141,7 +141,7 @@ header {
         padding: 3rem 5rem;
         height: 120vh;
         width: 100%;
-        animation: bounceInRight 1s;
+        animation: slideInRight 1s;
         .active {
           border-bottom: none;
         }
@@ -181,4 +181,7 @@ header {
       }
     }
   }
+    header.menu-open {
+      background: var(--primary) !important;
+    }
 }
