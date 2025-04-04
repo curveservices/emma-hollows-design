@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 2rem 0rem;
+    gap: 2rem;
+    padding: 4rem 0rem 2rem;
 }
 
 .flip-card {
     background-color: transparent;
-    width: var(--card-width, 300px);
+    width: var(--card-width, 400px);
     height: 500px;
     perspective: 1000px;
     color: #fff;
@@ -25,7 +25,10 @@
     &:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
-    
+    &:nth-child(even) {
+        margin-top: -1.2rem;
+        height: 540px;
+    }
     .flip-card-front,
     .flip-card-back {
         position: absolute;
@@ -54,6 +57,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-transform: capitalize;
             margin-top: -12rem;
             background: var(--nav);
             min-width: fit-content;
@@ -90,6 +94,9 @@
             height: 640px;
             background: rgba(0, 0, 0, 0.4);
             z-index: 1;
+        }
+        .name {
+            text-transform: capitalize;
         }
 
         .name,
