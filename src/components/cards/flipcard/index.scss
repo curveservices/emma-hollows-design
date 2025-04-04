@@ -100,7 +100,7 @@
             background: rgba(0, 0, 0, 0.4);
             z-index: 1;
             .front-title {
-                opacity: 0;
+                display: none;
             }
         }
         .name {
