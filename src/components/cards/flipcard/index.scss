@@ -99,6 +99,9 @@
             height: 640px;
             background: rgba(0, 0, 0, 0.4);
             z-index: 1;
+            .front-title {
+                opacity: 0;
+            }
         }
         .name {
             text-transform: capitalize;
