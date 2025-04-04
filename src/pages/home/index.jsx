@@ -7,6 +7,7 @@ import useScrollStates from "../../components/scrollState";
 import Helmet from "../../components/helmet";
 import useFirestoreData from "../../components/useFirestoreData";
 import LoadingSpinner from "../../components/loadingSpinner";
+import Socials from "../../components/socials";
 
 const Home = () => {
   const { second, third } = useScrollStates();
@@ -17,6 +18,9 @@ const Home = () => {
     <>
       <div className="home-page">
         <div className="hero">
+          <div className="socials">
+            <Socials/>
+          </div>
           <img
             src={hero}
             alt="Costume designer, West-end London"
