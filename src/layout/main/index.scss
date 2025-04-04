@@ -24,7 +24,7 @@
         position: absolute;
         top: 80vh;
         right: -40vw;
-        width: 80vw;
+        width: 90vw;
         height: 60vh;
         filter: blur(150px);
         background: var(--background-blur);
@@ -121,12 +121,11 @@
     }
 
     .second-section {
-      margin: 5rem 3rem 6rem;
-      padding: 0rem;
+      padding: 2rem 3rem 6rem;
 
       .text-box {
+        padding: 0 10rem;
         text-align: center;
-        padding: 0 8rem;
       }
     }
 
