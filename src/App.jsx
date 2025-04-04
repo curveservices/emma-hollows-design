@@ -20,6 +20,7 @@ import Contact from "./pages/contact/index.jsx";
 import GalleryPage from "./pages/galleryPage/index.jsx";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "./App.scss";
+import PrivacyPolicy from "./pages/privacy/index.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -86,6 +87,12 @@ const router = createBrowserRouter(
           <Suspense fallback={<LoadingSpinner />}>
             <GalleryPage />
           </Suspense>}
+        />
+        <Route path="privacy-policy" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <PrivacyPolicy/>
+          </Suspense>
+        }
         />
       </Route>
       <Route path="*" element={
