@@ -51,7 +51,7 @@ const Designer = () => {
             made in their own research, which all informs my costume designs.
           </p>
         </div>
-        <FeaturedWork cardWidth='400px' cardsData={cardsData} />
+        <FeaturedWork cardWidth='300px' cardsData={cardsData} />
       </section>
       <section className={`third-section ${third ? 'anim' : 'none'}`}>
         <Testimonials />
