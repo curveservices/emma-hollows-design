@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileAlt, faHouse, faSuitcase, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "../../components/button";
-import logo from "../../assets/images/logo1.png";
+import logo from "../../assets/images/logo1.webp";
 import "./index.scss";
 import MenuToggle from "../../components/menuToggle";
 
