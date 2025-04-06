@@ -40,7 +40,9 @@ const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWid
                             className="card-back-image"
                         />
                     
-                        <h3 className="name">{title}</h3>
+                        <div className="front-title">
+                            <h3 className="name">{title}</h3>
+                        </div>
                         <p className="desc subtitle">{description}</p>
                     </Link>
                     <div className="btn-container">
