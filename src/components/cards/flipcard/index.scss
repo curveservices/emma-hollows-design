@@ -121,9 +121,9 @@
 }
 @media screen and (max-width: 768px) {
     .flip-card{
-        .flip-card-back
+        .flip-card-front
         &:hover  {
-            .front-title {
+            .front-title .name {
                 display: none;
             }
         }
