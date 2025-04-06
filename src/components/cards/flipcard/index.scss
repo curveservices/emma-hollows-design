@@ -120,16 +120,7 @@
     }
 }
 @media screen and (max-width: 768px) {
-    .flip-card{
-        .flip-card-front{
-            .flip-card-inner{
-                &:hover {
-                    .front-title .name {
-                        display: none;
-                    }
-                }
-            }
+    .flip-card-back .front {
+            display: none;
         }
-        
-    }
 }
