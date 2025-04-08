@@ -239,7 +239,8 @@
         .socials {
             align-items: end;
             justify-content: center;
-            bottom: 15%;
+            position: relative;
+            bottom: 25%;
             margin: 0;
             .iconList {
               flex-direction: row;
@@ -266,4 +267,34 @@
     width: 35px;
     height: 35px;
   }
+}
+@media screen and (max-width: 1024px) {
+  .app {
+    .home-page,
+    .about-page,
+    .portfolio-page,
+    .cv-page,
+    .contact-page,
+    .designer-page,
+    .maker-page,
+    .wardrobe-page,
+    .film-page,
+    .gallery-page,
+    .policiy-page {
+        .hero {
+          .socials {
+            align-items: end;
+            justify-content: center;
+            position: relative;
+            bottom: 25%;
+            margin: 0;
+          
+            .iconList {
+              flex-direction: row;
+          
+            }
+          }
+        }
+      }
+    }
 }
