@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
+import Socials from "../../components/socials";
+
 import './index.scss';
 import Helmet from '../../components/helmet';
 
@@ -28,6 +30,9 @@ const CV = () => {
               target='_blank'
             />
           </div>
+        </div>
+        <div className="socials">
+          <Socials />
         </div>
       </div>
 
