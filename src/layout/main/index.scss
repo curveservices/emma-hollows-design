@@ -131,7 +131,7 @@
         .iconList {
           flex-direction: column;
           padding-bottom: 0rem;
-          animation: fadeInRight 2s forwards !important;
+          animation: fadeInRight 2s 0.5s backwards;
         }
       }
 
