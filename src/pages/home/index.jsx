@@ -18,9 +18,6 @@ const Home = () => {
     <>
       <div className="home-page">
         <div className="hero">
-          <div className="socials">
-            <Socials/>
-          </div>
           <img
             src={hero}
             alt="Costume designer, West-end London"
@@ -38,6 +35,9 @@ const Home = () => {
               />
               <Button text="My Portfolio" link="portfolio" color="#fff" />
             </div>
+          </div>
+          <div className="socials">
+            <Socials/>
           </div>
         </div>
         <div className={`second-section ${second ? 'anim' : 'none'}`}>
