@@ -109,7 +109,7 @@
       height: 100vh;
       overflow: hidden;
       color: #fff;
-
+      
       &>* {
         grid-column: 1;
         grid-row: 1;
@@ -126,15 +126,13 @@
       }
       .socials {
         display: flex;
-          justify-content: end;
-          position: relative;
-          margin-right: 4rem; 
-          z-index: 1;
-          .iconList {
-            flex-direction: column;
-            padding-bottom: 0rem;
-            animation: fadeInRight 2s forwards !important;
-          }
+        justify-content: end;
+        margin-right: 4rem; 
+        .iconList {
+          flex-direction: column;
+          padding-bottom: 0rem;
+          animation: fadeInRight 2s forwards !important;
+        }
       }
 
       .text-box {
