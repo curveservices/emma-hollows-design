@@ -19,6 +19,9 @@ const Navbar = () => {
       setScrolled(scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
