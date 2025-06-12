@@ -7,14 +7,13 @@ header {
   height: 75px;
   z-index: 1000;
   font-family: "Proxima Nova", sans-serif;
-  font-size: 18px;
   padding: 0rem 4rem 0;
   background-color: var(--nav);
   transition: all 2s ease;
   cursor: pointer;
   .logo {
     padding: 1rem;
-    width: 12.5rem;
+    width: 150%;
     height: auto;
   }
   .mobile-logo {
@@ -23,7 +22,7 @@ header {
   nav {
     display: flex;
     align-items: center;
-    gap: 3.75rem;
+    gap: 2rem;
     color: white;
     .active .menu-container {
       border-bottom: 2px solid var(--secondary);
@@ -103,7 +102,7 @@ header {
     }
     .mobile-logo {
       display: block;
-      width: 100px;
+      width: 200%;
       height: auto;
       object-fit: contain;
       padding-top: 5px;
