@@ -1,52 +1,68 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo1.webp';
+import logo from '../../assets/images/logo.webp';
 import './index.scss';
 import Socials from '../../components/socials';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <div className="footer-title">
-        <div className="footer-container">
+      <div className="footer-container">
+        <div className="footer-left">
+          <img
+            src={logo}
+            alt="telegraph hill private tutoring in South East London"
+            className="logo"
+          />
+          <p>Follow Me!</p>
+          <Socials />
+        </div>
+        <div className="nav-container">
+          <div className="card-title">Navigation</div>
           <ul className="site-links">
             <li>
-              <NavLink to='about-me'>About</NavLink>
+              <NavLink to="designer">Designer</NavLink>
             </li>
             <li>
-              <NavLink to='portfolio'>Portfolio</NavLink>
+              <NavLink to="supervisor">Supervisor</NavLink>
             </li>
             <li>
-              <NavLink to='/'>
-              <img
-                src={logo}
-                alt="Costume Design London's West end, wardrobe, maker, film"
-                className='footer-logo'
-                loading='lazy'
-              />
-            </NavLink>
+              <NavLink to="illustrator">Illustrator</NavLink>
             </li>
             <li>
-              <NavLink to='cv'>My CV</NavLink>
-            </li>
-            <li>
-              <NavLink to='contact'>Contact</NavLink>
+              <NavLink to="maker">Maker</NavLink>
             </li>
           </ul>
         </div>
+        <div className="contact-container">
+          <div className="card-title">Contact Me</div>
+          <div className="contact">
+            <FontAwesomeIcon icon={faPhone} />
+            <p className="text"> +44 791 689 6013</p>
+          </div>
+          <div className="contact">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <p className="text"> emma@emmahollows.co.uk</p>
+          </div>
+        </div>
       </div>
-      <hr className="div-line" />
-      <div className="socials-container">
-        <Socials/>
-        <div className="copy">
-        <Link to='https://www.immutable-studio.co.uk/'>created by Immutable Studio </Link>&copy;{year}
-        
-        <Link to='privacy-policy'>privary policy</Link>
-      </div>
-      </div>
+
+      <div className="div-line"></div>
+      <p className="copy">
+        &copy; {year} created by{" "}
+        <a
+          href="https://immutable-studio.co.uk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Immutable Studio
+        </a>
+      </p>
     </footer>
-  )
+  );
 }
 
 export default Footer
