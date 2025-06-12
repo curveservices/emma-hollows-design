@@ -28,10 +28,6 @@ const Layout = () => {
     <>
       <Navbar />
       <main className="app">
-        <div className="blurs">
-        <div className="blur-left"></div>
-        <div className="blur-right"></div>
-      </div>
         <Outlet />
       </main>
       {showButton && (

@@ -1,35 +1,6 @@
 .app {
   font-family: "Proxima Nova", sans-serif;
   font-display: swap;
-  .blurs {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-  
-      .blur-left {
-        position: absolute;
-        top: 0vh;
-        left: -40vw;
-        width: 80vw;
-        height: 60vh;
-        filter: blur(150px);
-        background: var(--background-blur);
-      }
-  
-      .blur-right {
-        position: absolute;
-        top: 80vh;
-        right: -40vw;
-        width: 80vw;
-        height: 60vh;
-        filter: blur(150px);
-        background: var(--background-blur);
-      }
-    }
   .error-message {
       display: flex;
       flex-direction: column;
@@ -200,16 +171,6 @@
 }
 @media screen and (max-width: 768px)  {
   .app {
-    .blurs {
-        position: sticky;
-        .blur-right {
-          right: 0vw;
-          width: 60vw;
-        }
-        .blur-left, .blur-left {
-          filter: blur(100px);
-        }
-      }
     .home-page,
     .about-page,
     .portfolio-page,
