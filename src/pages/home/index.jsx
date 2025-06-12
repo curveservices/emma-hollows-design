@@ -27,9 +27,7 @@ const Home = () => {
           />
           <div className="text-box">
             <h1 className="main-title">Emma Hollows Design</h1>
-            <div className="subtitle">
-              Costume Designer and Supervisor
-            </div>
+            <div className="subtitle">Costume Designer and Supervisor</div>
             <div className="btn-container">
               <Button
                 text="contact me"
@@ -57,8 +55,8 @@ const Home = () => {
               American Stage Tour.
             </p>
           </div>
-          <FeaturedWork cardsData={designerData} cardWidth="300px" />
           <FeaturedWork cardsData={supervisorData} cardWidth="300px" />
+          <FeaturedWork cardsData={designerData} cardWidth="300px" />
           <FeaturedWork cardsData={makerData} cardWidth="300px" />
           <div className="subtitle">Illustrations</div>
           <FeaturedWork cardsData={illustratorData} cardWidth="300px" />
