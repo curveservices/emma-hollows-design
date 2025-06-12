@@ -1,9 +1,7 @@
-import React from 'react';
 import useScrollStates from '../../components/scrollState';
 import maker from '../../assets/images/bodice.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork';
-import Testimonials from '../../components/testimonials';
 import LoadingSpinner from '../../components/loadingSpinner';
 import useFirestoreData from '../../components/useFirestoreData';
 import Helmet from '../../components/helmet';
@@ -27,20 +25,7 @@ const Maker = () => {
               />
               <div className="text-box">
                   <h1 className="main-title">Maker</h1>
-                  <div className="subtitle">Emma Hollows Design</div>
-                  <div className="btn-container">
-                    <Button
-                        text="work with me"
-                        link="/contact"
-                        background="var(--secondary)"
-                        color="#000"
-                    />
-                    <Button
-                        text="My Portfolio"
-                        link="/portfolio"
-                        color="#fff"
-                    />
-                  </div>
+                  <div className="subtitle">Emma Hollows</div>
               </div>
           </section>
           <section className={`second-section ${second ? 'anim' : 'none'}`}>
@@ -66,9 +51,6 @@ const Maker = () => {
                   <div className="subtitle">Other</div>
               </div>
               <FeaturedWork cardWidth='400px' cardsData={otherData} />
-          </section>
-          <section className={`third-section ${third ? 'anim' : 'none'}`}>
-              <Testimonials />
           </section>
            <Helmet
           title="Maker | London Costume Desgin for Theatre and Film"
