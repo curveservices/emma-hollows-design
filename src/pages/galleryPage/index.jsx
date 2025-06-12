@@ -73,19 +73,6 @@ const GalleryPage = () => {
               <div className="text-box">
                   <h1 className="main-title">{galleryData.galleryName}</h1>
                   <div className="subtitle">{galleryData.heroSubtitle}</div>
-                  <div className="btn-container">
-                    <Button
-                        text="work with me"
-                        link="/contact"
-                        background="var(--secondary)"
-                        color='#000'
-                    />
-                    <Button
-                        text="My Portfolio"
-                        link="/portfolio"
-                        color="#fff"
-                    />
-                </div>
               </div>
             </section>
             <section className="second-section">
