@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../../components/button";
 import hero from "../../assets/images/tina2.webp";
 import FeaturedWork from "../../components/cards/featuredWork";
-import Testimonials from "../../components/testimonials";
 import useScrollStates from "../../components/scrollState";
 import Helmet from "../../components/helmet";
 import useFirestoreData from "../../components/useFirestoreData";
@@ -10,10 +9,13 @@ import LoadingSpinner from "../../components/loadingSpinner";
 import Socials from "../../components/socials";
 
 const Home = () => {
-  const { second, third } = useScrollStates();
-  const {cardsData, loading, error} = useFirestoreData('featured');
-  if (loading) return <LoadingSpinner />;
-  if (error) return <div className='error-message'>Error: {error}</div>;
+  const { second } = useScrollStates();
+  const { cardsData: designerData, loading: loadingDesigner, error: errorDesigner } = useFirestoreData('designer');
+  const { cardsData: supervisorData, loading: loadingSupervisor, error: errorSupervisor } = useFirestoreData("wardrobe");
+  const { cardsData: makerData, loading: loadingMaker, error: errorMaker } = useFirestoreData("maker");
+  const { cardsData: illustratorData, loading: loadingIllustrator, error: errorIllustrator } = useFirestoreData("illustrations");
+  if (loadingDesigner || loadingSupervisor || loadingMaker || loadingIllustrator) return <LoadingSpinner />;
+  if (errorDesigner || errorSupervisor || errorMaker || errorIllustrator) return <div className='error-message'>Error: {error}</div>;
   return (
     <>
       <div className="home-page">
@@ -25,42 +27,41 @@ const Home = () => {
           />
           <div className="text-box">
             <h1 className="main-title">Emma Hollows Design</h1>
-            <div className="subtitle">designer | supervisor | maker</div>
+            <div className="subtitle">
+              Costume Designer and Supervisor
+            </div>
             <div className="btn-container">
               <Button
-                text="work with me"
+                text="contact me"
                 link="contact"
-                background="var(--secondary)"
-                color="#000"
+                background="#000"
+                color="#fff"
               />
-              <Button text="My Portfolio" link="portfolio" color="#fff" />
             </div>
           </div>
           <div className="socials">
-            <Socials/>
+            <Socials />
           </div>
         </div>
-        <div className={`second-section ${second ? 'anim' : 'none'}`}>
+        <div className={`second-section ${second ? "anim" : "none"}`}>
           <div className="text-box">
-            <div className="subtitle" style={{color:'var(--secondary)' }}>My portfolio</div>
-            <h2>Latest Work</h2>
-            <p>As a designer I am very research driven: establishing a solid foundation of research helps
-              me to create a rich and dynamic world on stage or screen. I love to share this research with
-              the other members of my design team and the actors, to bounce ideas around and hear what discoveries
-              they have made in their own research, which all informs my costume designs.</p>
+            <div className="subtitle">My Work</div>
+            <h2>Explore my portfolio</h2>
+            <p>
+              I have been working for a number of years in both the UK and the
+              USA where I trained in Costume Design at the University of
+              Massachusetts Amherst. Some previous highlights of my career have
+              been working on The Nutcracker at the Royal Albert Hall in London;
+              numerous productions at Shakespeare and Company in Massachusetts;
+              and touring up the East Coast of the USA with The Cambridge
+              American Stage Tour.
+            </p>
           </div>
-          <FeaturedWork cardsData={cardsData} cardWidth='400px'/>
-          <div className="btn-container">
-            <Button
-              text='my portfolio'
-              link='portfolio'
-              background='var(--secondary)'
-              color='#000'
-            />
-          </div>
-        </div>
-        <div className={` ${third ? 'anim' : 'none'}`}>
-          <Testimonials />
+          <FeaturedWork cardsData={designerData} cardWidth="300px" />
+          <FeaturedWork cardsData={supervisorData} cardWidth="300px" />
+          <FeaturedWork cardsData={makerData} cardWidth="300px" />
+          <div className="subtitle">Illustrations</div>
+          <FeaturedWork cardsData={illustratorData} cardWidth="300px" />
         </div>
         <Helmet
           title="Home | London Costume Desgin for Theatre and Film"
@@ -68,7 +69,6 @@ const Home = () => {
           keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
         />
       </div>
-      
     </>
   );
 };
