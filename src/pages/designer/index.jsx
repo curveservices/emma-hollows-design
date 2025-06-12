@@ -1,9 +1,7 @@
-import React from 'react';
 import useScrollStates from '../../components/scrollState';
 import designer from '../../assets/images/designer.webp';
 import Button from '../../components/button';
 import FeaturedWork from '../../components/cards/featuredWork';
-import Testimonials from '../../components/testimonials';
 import useFirestoreData from '../../components/useFirestoreData';
 import LoadingSpinner from '../../components/loadingSpinner';
 import Helmet from '../../components/helmet';
@@ -24,20 +22,7 @@ const Designer = () => {
         />
         <div className="text-box">
           <h1 className="main-title">Designer</h1>
-          <div className="subtitle">Emma Hollows Design</div>
-          <div className="btn-container">
-            <Button
-                text="work with me"
-                link="/contact"
-                background="var(--secondary)"
-                color="#000"
-            />
-            <Button
-                text="My Portfolio"
-                link="/portfolio"
-                color="#fff"
-            />
-          </div>
+          <div className="subtitle">Emma Hollows</div>
         </div>
       </section>
       <section className={`second-section ${second ? 'anim' : 'none'}`}>
@@ -52,9 +37,6 @@ const Designer = () => {
           </p>
         </div>
         <FeaturedWork cardWidth='300px' cardsData={cardsData} />
-      </section>
-      <section className={`third-section ${third ? 'anim' : 'none'}`}>
-        <Testimonials />
       </section>
        <Helmet
           title="Designer | London Costume Desgin for Theatre and Film"
