@@ -55,8 +55,11 @@ const Home = () => {
               American Stage Tour.
             </p>
           </div>
+          <div className="subtitle">Costume Supervisor</div>
           <FeaturedWork cardsData={supervisorData} cardWidth="300px" />
+          <div className="subtitle">Costume Designer</div>
           <FeaturedWork cardsData={designerData} cardWidth="300px" />
+          <div className="subtitle">Costume Maker</div>
           <FeaturedWork cardsData={makerData} cardWidth="300px" />
           <div className="subtitle">Illustrations</div>
           <FeaturedWork cardsData={illustratorData} cardWidth="300px" />
