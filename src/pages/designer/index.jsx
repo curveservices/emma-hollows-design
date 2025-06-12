@@ -27,7 +27,7 @@ const Designer = () => {
       </section>
       <section className={`second-section ${second ? 'anim' : 'none'}`}>
         <div className="text-box">
-          <div className="subtitle">Designer</div>
+          <div className="subtitle">Costume Design</div>
           <h2>My Design Work</h2>
           <p>
             As a designer I am very research driven: establishing a solid foundation of research helps me to
