@@ -9,11 +9,11 @@ import LoadingSpinner from './components/loadingSpinner/index.jsx';
 import Layout from "./layout/main/index.jsx";
 import Home from "./pages/home/index.jsx"
 import About from "./pages/about/index.jsx";
-import Portfolio from "./pages/portfolio/index.jsx";
+import Illustrator from "./pages/illustrator/index.jsx";
 import NotFound from './pages/404/index.jsx';
 import Designer from "./pages/designer/index.jsx";
 import Maker from "./pages/maker/index.jsx";
-import Wardrobe from "./pages/wardrobe/index.jsx";
+import Supervisor from "./pages/supervisor/index.jsx";
 import Film from "./pages/film/index.jsx";
 import CV from "./pages/cv/index.jsx";
 import Contact from "./pages/contact/index.jsx";
@@ -40,9 +40,9 @@ const router = createBrowserRouter(
           </Suspense>
         }
         />
-        <Route path="portfolio" element={
+        <Route path="illustrator" element={
           <Suspense fallback={<LoadingSpinner />}>
-            <Portfolio/>
+            <Illustrator/>
           </Suspense>
         }
         />
@@ -70,9 +70,9 @@ const router = createBrowserRouter(
           </Suspense>
         }
         />
-        <Route path="/wardrobe" element={
+        <Route path="/supervisor" element={
           <Suspense fallback={<LoadingSpinner />}>
-            <Wardrobe />
+            <Supervisor />
           </Suspense>
         }
         />
