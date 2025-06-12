@@ -23,20 +23,7 @@ const Film = () => {
               />
               <div className="text-box">
                   <h1 className="main-title">Film</h1>
-                  <div className="subtitle">Emma Hollows Design</div>
-                  <div className="btn-container">
-                    <Button
-                        text="work with me"
-                        link="/contact"
-                        background="var(--secondary)"
-                        color="#000"
-                    />
-                    <Button
-                        text="My Portfolio"
-                        link="/portfolio"
-                        color="#fff"
-                    />
-                  </div>
+                  <div className="subtitle">Emma Hollows</div>
               </div>
           </section>
           <section className={`second-section ${second ? 'anim' : 'none'}`}>
