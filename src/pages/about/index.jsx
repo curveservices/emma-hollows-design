@@ -106,7 +106,7 @@ const About = () => {
           <h1 className="main-title">My CV</h1>
           <div className="btn-container">
             <Button
-              link="/public/EmmaHollowsCV.pdf"
+              link="/EmmaHollowsCV.pdf"
               text="Download my CV"
               background="var(--secondary)"
               color="#000"
