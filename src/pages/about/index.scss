@@ -1,5 +1,19 @@
 .about-page {
     padding: 8rem 6rem 0;
+    .hero-about {
+        height: 30vh !important;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            text-align: center;
+        }
+    }
     .portrait-image {
         width: 400px;
         height: 400px;
@@ -16,6 +30,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            margin-top: 3rem;
             width: 50%;
             gap: 1rem;
             .mobile-view {
@@ -96,7 +111,10 @@
 }
 @media screen and (max-width: 768px) {
     .about-page {
-        padding: 8rem 2rem 0;
+        padding: 5rem 2rem 0;
+        .hero-about {
+            height: 20vh !important;
+        }
         .subtitle {
             text-align: center;
         }
@@ -111,6 +129,7 @@
             .hero-left {
                 width: 100%;
                 align-items: center;
+                margin: 0;
             }
             .hero-right {
                 width: 100%;
@@ -124,6 +143,9 @@
             .second-left {
                 width: 100%;
                 margin-top: 2rem;
+            }
+            .second-right {
+                justify-content: center;
             }
         }
         table {

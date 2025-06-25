@@ -1,4 +1,3 @@
-import React from 'react';
 import emma1 from '../../assets/images/emma1.webp';
 import emma2 from '../../assets/images/emma2.webp';
 import Button from '../../components/button';
@@ -22,9 +21,14 @@ const About = () => {
   };
   return (
     <div className="about-page">
+      <div className="hero-about">
+        <div className="text-box">
+          <h1 className="main-title">Emma Hollows</h1>
+          <div className="subtitle">Costume Desiger and Supervisor</div>
+        </div>
+      </div>
       <section className="about-hero">
         <div className="hero-left">
-          <h1>About Me</h1>
           <img
             src={emma1}
             alt="Emma Hollows Design, Costume designer, West-end London"
@@ -32,9 +36,6 @@ const About = () => {
           />
         </div>
         <div className="hero-right">
-          <div className="subtitle desktop">
-            costume designer &amp; supervisor
-          </div>
           <p>
             I have been working in the theatre industry for the past decade both
             in the UK and internationally, including productions on the West
@@ -53,14 +54,10 @@ const About = () => {
             I researched performing arts in Kerala, comparing the costumes and
             make up of Kathakali and Pulikali.
           </p>
-          <Socials />
         </div>
       </section>
       <section className={`second-section ${second ? "anim" : "none"}`}>
         <div className="second-left">
-          <div className="subtitle desktop">
-            costume designer &amp; supervisor
-          </div>
           <p>
             After graduation, I moved to London and began working in the theatre
             industry designing for fringe productions and working in the
@@ -103,13 +100,10 @@ const About = () => {
       </section>
       <section className={`third-section ${third ? "anim" : "none"}`}>
         <div className="text-box">
-          <h1 className="main-title">My CV</h1>
           <div className="btn-container">
             <Button
               link="/EmmaHollowsCV.pdf"
               text="Download my CV"
-              background="var(--secondary)"
-              color="#000"
               target="_blank"
             />
           </div>
@@ -384,7 +378,10 @@ const About = () => {
             University of Massachusetts Amhurst Department of Theatre Travel
             Grant 1029
           </li>
-          <li>University of Massachusetts Amhurst Department of Theatre Travel Grant 2018</li>
+          <li>
+            University of Massachusetts Amhurst Department of Theatre Travel
+            Grant 2018
+          </li>
           <li>The Mary Euphrasia Mosley Fund 2014</li>
           <li>Homerton College Research Grant 2014</li>
         </ul>
