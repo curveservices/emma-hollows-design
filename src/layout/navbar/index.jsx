@@ -100,14 +100,12 @@ const Navbar = () => {
           >
             <div className="menu-container">
               <FontAwesomeIcon icon={faUserAlt} className="mobile-icon" />
-              <div className="text">About Me</div>
+              <div className="text">Bio</div>
             </div>
           </NavLink>
           <Button
             text="Contact"
             link="/contact"
-            background="var(--secondary)"
-            color="#000"
             boxShadow="none"
             onClick={() => setShowNav(false)}
           />
