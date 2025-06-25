@@ -3,13 +3,23 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 4rem 0rem 2rem;
+    padding: 0rem 0rem 2rem;
+    .flip-card {
+            animation: fadeInUp 1s backwards;
+        }
+    
+        @for $i from 1 through 10 {
+    
+            .flip-card:nth-child(#{$i}) {
+                animation-delay: #{0.4s + ($i * 0.2s)};
+            }
+        }
 }
 
 .flip-card {
     background-color: transparent;
-    width: var(--card-width, 400px);
-    height: 500px;
+    width: var(--card-width, 300px);
+    height: var(--card-height, 300px);
     perspective: 1000px;
     color: #fff;
     cursor: pointer;
@@ -28,10 +38,6 @@
             transition: all 0.1s ease-in-out;
             opacity: 0;
         }
-    }
-    &:nth-child(even) {
-        margin-top: -1.2rem;
-        height: 540px;
     }
     .flip-card-front,
     .flip-card-back {

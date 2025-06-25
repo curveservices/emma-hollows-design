@@ -3,9 +3,12 @@ import Button from '../../button';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.scss';
 
-const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWidth }) => {
+const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWidth, cardHeight }) => {
     const navigate = useNavigate();
-    const cardStyle = cardWidth ? { '--card-width': cardWidth } : {};
+    const cardStyle = {
+      ...(cardWidth && { "--card-width": cardWidth }),
+      ...(cardHeight && { "--card-height": cardHeight }),
+    };
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -47,8 +50,6 @@ const FlipCard = ({ frontImage, backImage, title, description, viewLink, cardWid
                         <Button
                             text="View"
                             link={viewLink}
-                            background="var(--secondary)"
-                            color='#000'
                             onClick={handleClick}
                         />
                     </div>
