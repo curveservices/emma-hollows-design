@@ -12,8 +12,6 @@ const Contact = () => {
   return (
     <div className='contact-page'>
         <div className="hero-left">
-            <h1>Contact Me</h1>
-            <div className="subtitle">designer | supervisor | maker</div>
               <img
                   className='portrait-image'
                   src={emma}
