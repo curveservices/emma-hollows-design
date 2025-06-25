@@ -63,40 +63,42 @@ const GalleryPage = () => {
     
     
   return (
-        <div className='gallery-page'>
-            <section className="hero">
-              <img
-                  src={galleryData.heroImage} 
-                  alt="Emma Hollows Design, designer, west-end London"
-                  className='hero-image'
-              />
-              <div className="text-box">
-                  <h1 className="main-title">{galleryData.galleryName}</h1>
-                  <div className="subtitle">{galleryData.heroSubtitle}</div>
-              </div>
-            </section>
-            <section className="second-section">
-              <div className="text-box">
-                  <div className="subtitle">{galleryData.subtitle}</div>
-                  <h2>{galleryData.galleryName}</h2>
-                  <p className='info'>
-                      {galleryData.info}
-                      {galleryData.link &&
-                          <a href={galleryData.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--secondary)' }}>
-                              view here
-                        </a>
-                      }
-                  </p>
-              </div>
-              <ReactImageGallery items={galleryData.images} autoPlay />
-            </section>
-            <Helmet
-            title={`${galleryData.galleryName} | London Costume Desgin for Theatre and Film`}
-            description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
-            keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
-            />
+    <div className="gallery-page">
+      <section className="hero">
+        <div className="text-box">
+          <h1 className="main-title">{galleryData.galleryName}</h1>
+          <div className="subtitle">{galleryData.heroSubtitle}</div>
+          <div className="subtitle">{galleryData.subtitle}</div>
         </div>
-    )
+      </section>
+      <section className="second-section">
+        <ReactImageGallery items={galleryData.images} autoPlay />
+        <div className="text-box">
+          <p className="info">
+            {galleryData.info}
+            {galleryData.link && (
+              <a
+                href={galleryData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "underline",
+                  color: "var(--secondary)",
+                }}
+              >
+                view here
+              </a>
+            )}
+          </p>
+        </div>
+      </section>
+      <Helmet
+        title={`${galleryData.galleryName} | London Costume Desgin for Theatre and Film`}
+        description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+        keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+      />
+    </div>
+  );
 }
 
 export default GalleryPage
