@@ -23,11 +23,7 @@ const Maker = () => {
         </div>
       </section>
       <section className={`second-section`}>
-        <FeaturedWork
-          cardsData={makerData}
-          cardWidth="380px"
-          cardHeight="460px"
-        />
+        <FeaturedWork cardsData={makerData} />
         <div className="text-box">
           <div className="subtitle">Millinery</div>
         </div>
@@ -35,7 +31,7 @@ const Maker = () => {
         <div className="text-box">
           <div className="subtitle">Masks</div>
         </div>
-        <FeaturedWork cardsData={masksData} cardHeight='400px'/>
+        <FeaturedWork cardsData={masksData} />
         <div className="text-box">
           <div className="subtitle">Other</div>
         </div>
