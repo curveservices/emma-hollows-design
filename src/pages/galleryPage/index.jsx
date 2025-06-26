@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import LoadingSpinner from '../../components/loadingSpinner';
 import { db } from '../../../firebase.config';
@@ -13,6 +14,7 @@ const GalleryPage = () => {
     const [galleryData, setGalleryData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchGalleryData = async () => {
@@ -72,6 +74,9 @@ const GalleryPage = () => {
         </div>
       </section>
       <section className="second-section">
+        <div className="btn-container">
+          <Button text="Go Back" onClick={() => navigate(-1)} />
+        </div>
         <ReactImageGallery items={galleryData.images} autoPlay />
         <div className="text-box">
           <p className="info">
