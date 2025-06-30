@@ -7,12 +7,13 @@ header {
   height: 75px;
   z-index: 1000;
   font-family: "Arial", sans-serif;
+  text-transform: uppercase;
   padding: 0rem 4rem 0;
   transition: all 2s ease;
   cursor: pointer;
   .logo {
-    padding: 1rem;
-    width: 150%;
+    padding: 1rem 0;
+    width: 275px;
     height: auto;
   }
   .mobile-logo {

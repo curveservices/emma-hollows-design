@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faPaintBrush, faPeopleArrows, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "../../components/button";
-import logo from "../../assets/images/logo.webp";
-import "./index.scss";
+import logo from "../../assets/images/sigLogo.webp";
 import MenuToggle from "../../components/menuToggle";
+import "./index.scss";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
