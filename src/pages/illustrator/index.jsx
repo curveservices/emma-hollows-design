@@ -22,7 +22,7 @@ const Illustrator = () => {
           </div>
         </section>
         <section className={`second-section`}>
-          <FeaturedWork cardsData={cardsData} cardWidth='300px' cardHeight='380px' />
+          <FeaturedWork cardsData={cardsData} />
         </section>
          <Helmet
           title="Portfolio | London Costume Desgin for Theatre and Film"
