@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.webp';
+import logo from '../../assets/images/sigLogo.webp';
 import './index.scss';
 import Socials from '../../components/socials';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -52,14 +52,15 @@ const Footer = () => {
 
       <div className="div-line"></div>
       <p className="copy">
-        &copy; {year} created by{" "}
+        designed by{" "}
         <a
-          href="https://immutable-studio.co.uk"
+          href="https://www.immutable-studio.co.uk"
           target="_blank"
           rel="noopener noreferrer"
         >
           Immutable Studio
         </a>
+        &copy; {year}
       </p>
     </footer>
   );

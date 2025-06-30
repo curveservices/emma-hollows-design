@@ -1,6 +1,6 @@
 footer {
     text-transform: uppercase;
-    background: #1a1a1a;
+    background: #000;
     color: #fff;
     font-family: 'Arial', sans-serif;
 
@@ -8,6 +8,7 @@ footer {
         display: flex;
         justify-content: space-between;
         padding: 1em 4em 0;
+        border-top: 1px solid var(--secondary);
 
         .card-title {
             font-family: 'Arial', sans-serif;
@@ -21,8 +22,9 @@ footer {
             align-items: flex-start;
 
             .logo {
-                width: 50%;
+                width: 300px;
                 height: auto;
+                padding: 1rem 0;
             }
         }
 
@@ -68,16 +70,11 @@ footer {
         }
     }
 
-    .div-line {
-        margin: 0rem 5rem;
-        border: 1px solid var(--secondary);
-    }
-
     .copy {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 1em;
+        align-items: start;
+        justify-content: start;
+        padding: 1rem 4rem;
         gap: 8px;
         font-size: 12px;
     }
