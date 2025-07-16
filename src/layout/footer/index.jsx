@@ -58,7 +58,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Immutable Studio
+          <u>Immutable Studio</u>
         </a>
         &copy; {year}
       </p>

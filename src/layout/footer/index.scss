@@ -89,7 +89,7 @@ footer {
 
             .footer-left {
                 .logo {
-                    width: 10%;
+                    width: 200px;
                 }
             }
 
@@ -111,12 +111,13 @@ footer {
         }
 
         .div-line {
-            margin: 1em 2em;
+            margin: 1rem 0 0;
+            border: 1px solid var(--secondary);
         }
 
         .copy {
             font-size: 12px;
-            padding: 1em 0 2em;
+            padding: 0rem 1.5rem 1rem;
         }
     }
 }
