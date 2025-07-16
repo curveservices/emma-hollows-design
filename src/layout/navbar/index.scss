@@ -13,7 +13,7 @@ header {
   cursor: pointer;
   .logo {
     padding: 1rem 0;
-    width: 275px;
+    max-width: 275px;
     height: auto;
   }
   .mobile-logo {
@@ -93,19 +93,18 @@ header {
 .hamburger {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1170px) {
   header {
     padding: 0rem 2rem;
-    background: var(--nav);
+    background: #000;
     .logo {
       display: none;
     }
     .mobile-logo {
       display: block;
-      width: 200%;
+      width: 200px;
       height: auto;
       object-fit: contain;
-      padding-top: 5px;
     }
 
     nav {
@@ -140,18 +139,18 @@ header {
         padding: 3rem 5rem;
         height: 120vh;
         width: 100%;
-        animation: slideInRight 1s;
+        animation: slideInRight 0.3s;
         .active {
           border-bottom: none;
         }
         .text {
-          font-size: 24px;
+          font-size: 18px;
         }
 
         .menu-container {
           display: flex;
           align-items: center;
-          gap: 40px;
+          gap: 1rem;
           margin-top: 1rem;
           border-bottom: none;
         }
