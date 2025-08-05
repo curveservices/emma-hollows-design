@@ -69,16 +69,21 @@ const GalleryPage = () => {
       <section className="hero">
         <div className="text-box">
           <h1 className="main-title">{galleryData.galleryName}</h1>
-          <div className="subtitle">{galleryData.heroSubtitle}</div>
-          <div className="subtitle">{galleryData.subtitle}</div>
         </div>
       </section>
       <section className="second-section">
         <div className="btn-container">
           <Button text="Go Back" onClick={() => navigate(-1)} />
         </div>
-        <ReactImageGallery items={galleryData.images} autoPlay />
-        <div className="text-box">
+        <ReactImageGallery
+          items={galleryData.images}
+          slideInterval={5000}
+          slideDuration={1000}
+          autoPlay
+        />
+        <div className="text-box" style={{ paddingTop: '1rem' }}>
+          <h1 style={{paddingTop: '1rem'}}>{galleryData.heroSubtitle}</h1>
+          <div className="subtitle" style={{paddingTop: '1rem'}}>{galleryData.subtitle}</div>
           <p className="info">
             {galleryData.info}
             {galleryData.link && (
