@@ -10,26 +10,23 @@ const Designer = () => {
   if (error) return <div className='error-message'>Error: {error}</div>;
 
   return (
-    <div className='designer-page'>
+    <div className="designer-page">
       <section className="hero">
         <div className="text-box">
           <h1 className="main-title">Designer</h1>
-          <div className="subtitle">Emma Hollows</div>
-        </div>
-        <div className="socials">
           <Socials />
         </div>
       </section>
       <section className={`second-section`}>
-        <FeaturedWork cardWidth='300px' cardsData={cardsData} />
+        <FeaturedWork cardWidth="300px" cardsData={cardsData} />
       </section>
-       <Helmet
-          title="Designer | London Costume Desgin for Theatre and Film"
-          description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
-          keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
-        />
+      <Helmet
+        title="Designer | London Costume Desgin for Theatre and Film"
+        description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
+        keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
+      />
     </div>
-  )
+  );
 }
 
 export default Designer
