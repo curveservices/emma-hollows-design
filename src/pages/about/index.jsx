@@ -1,13 +1,11 @@
 import emma1 from '../../assets/images/emma1.webp';
-import emma2 from '../../assets/images/emma2.webp';
 import Button from '../../components/button';
-import Socials from '../../components/socials';
 import useScrollStates from '../../components/scrollState';
 import Helmet from '../../components/helmet';
 import './index.scss';
 
 const About = () => {
-  const { second, third } = useScrollStates();
+  const { second } = useScrollStates();
   const schemData = {
     "@context": "https://schema.org",
     "@type": "Website",
@@ -23,8 +21,7 @@ const About = () => {
     <div className="about-page">
       <div className="hero-about">
         <div className="text-box">
-          <h1 className="main-title">Emma Hollows</h1>
-          <div className="subtitle">Costume Desiger and Supervisor</div>
+          <h1 className="">Costume Designer and Supervisor</h1>
         </div>
       </div>
       <section className="about-hero">
@@ -90,15 +87,8 @@ const About = () => {
             Real in Madrid later this year.
           </p>
         </div>
-        <div className="second-right">
-          <img
-            src={emma2}
-            alt="Emma Hollows Design, Costume designer, West-end London"
-            className="portrait-image image-right"
-          />
-        </div>
       </section>
-      <section className={`third-section ${third ? "anim" : "none"}`}>
+      <section className={`third-section`}>
         <div className="text-box">
           <div className="btn-container">
             <Button
@@ -120,6 +110,14 @@ const About = () => {
                 <th>Costume Designer</th>
               </tr>
             </thead>
+            <tbody>
+              <tr>
+                <td>Last Days - Royal Opera House</td>
+                <td>Costume Supervisor</td>
+                <td>Anna Morrissey and Matt Copson</td>
+                <td>TBC</td>
+              </tr>
+            </tbody>
             <tbody>
               <tr>
                 <td>Carmen - Teatro Real, Madrid</td>
