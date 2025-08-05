@@ -19,16 +19,11 @@ const Supervisor = () => {
       <section className="hero">
         <div className="text-box">
           <h1 className="main-title">Costume Supervisor</h1>
-          <div className="subtitle">Emma Hollows</div>
-        </div>
-        <div className="socials">
           <Socials />
         </div>
       </section>
       <section className={`second-section`}>
-        <FeaturedWork
-          cardsData={supervisorData}
-        />
+        <FeaturedWork cardsData={supervisorData} />
       </section>
       <Helmet
         title="Supervisor | London Costume Desgin for Theatre and Film"

@@ -11,27 +11,24 @@ const Illustrator = () => {
   if (error) return <div className='error-message'>Error: {error}</div>
   return (
     <>
-      <div className='portfolio-page'>
+      <div className="portfolio-page">
         <section className="hero">
           <div className="text-box">
             <h1 className="main-title">Illustrator</h1>
-            <div className="subtitle">Emma Hollows</div>
-          </div>
-          <div className="socials">
             <Socials />
           </div>
         </section>
         <section className={`second-section`}>
           <FeaturedWork cardsData={cardsData} />
         </section>
-         <Helmet
+        <Helmet
           title="Portfolio | London Costume Desgin for Theatre and Film"
           description="Emma Hollows Desgin, I am a costume and set designer and maker currently working on London's West End"
           keywords="London's West-end, theatre, costume designer, costume maker, set designer, London, theatre"
         />
       </div>
     </>
-  )
+  );
 }
 
 export default Illustrator;
