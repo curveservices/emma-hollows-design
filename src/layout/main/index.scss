@@ -27,7 +27,7 @@
       font-size: 32px;
       letter-spacing: 4.5px;
       font-weight: 500;
-      color: #fff;
+      color: var(--secondary);
       text-transform: uppercase;
     }
     h2 {
@@ -56,9 +56,6 @@
           animation-delay: 1s;
         }
     }
-    span {
-      animation: fadeInUp 1s backwards;
-    }
     .subtitle {
       font-family: "Arial", sans-serif;
       text-transform: uppercase;
@@ -80,7 +77,6 @@
         display: grid;
         width: 100%;
         height: 100vh;
-        overflow: hidden;
         color: #fff;
       
         &>* {
@@ -88,30 +84,17 @@
           grid-row: 1;
         }
       
-        .socials {
-          display: flex;
-          justify-content: end;
-          margin-right: 4rem;
-          margin-top: 4rem;
-      
-          .iconList {
-            flex-direction: column;
-            padding-bottom: 0rem;
-            animation: fadeInRight 2s 0.5s backwards;
-          }
-        }
-      
         .text-box {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          margin-top: 4rem;
-          gap: 2rem;
-          text-align: center; }
+          text-align: center; 
+          margin-top: 2rem;
+        }
     }
 
     .second-section {
-      padding: 1rem 0rem 6rem;
+      padding: 0rem 0rem 6rem;
 
       .text-box {
         padding: 0 10rem 3rem;
@@ -176,8 +159,9 @@
     .film-page,
     .contact-page,
     .gallery-page {
+      padding: 1rem 2rem;
       h1 {
-        font-size: 36px;
+        font-size: 32px;
       }
       h2 {
         font-size: 32px;
@@ -192,12 +176,10 @@
         font-size: 18px;
       }
       .hero {
+        height: 30vh !important;
         .socials {
-            align-items: end;
-            justify-content: center;
-            position: relative;
-            bottom: 25%;
-            margin: 0;
+            top: 0;
+            z-index: 0;
             .iconList {
               flex-direction: row;
               animation: fadeInUp 1s backwards;

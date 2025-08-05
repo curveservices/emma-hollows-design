@@ -106,7 +106,6 @@ const Navbar = () => {
           <Button
             text="Contact"
             link="/contact"
-            boxShadow="none"
             onClick={() => setShowNav(false)}
           />
         </nav>

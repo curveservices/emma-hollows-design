@@ -96,7 +96,7 @@ header {
 @media screen and (max-width: 1170px) {
   header {
     padding: 0rem 2rem;
-    background: #000;
+    background: var(--primary);
     .logo {
       display: none;
     }
