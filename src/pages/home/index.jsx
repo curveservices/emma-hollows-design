@@ -18,10 +18,7 @@ const Home = () => {
       <div className="home-page">
         <div className="hero">
           <div className="text-box">
-            <h1 className="main-title">Emma Hollows</h1>
-            <div className="subtitle">Costume Designer and Supervisor</div>
-          </div>
-          <div className="socials">
+            <h1 className="main-title">Costume Designer and Supervisor</h1>
             <Socials />
           </div>
         </div>
