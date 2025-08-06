@@ -81,11 +81,22 @@ const GalleryPage = () => {
           slideDuration={1000}
           autoPlay
         />
-        <div className="text-box" style={{ paddingTop: '1rem' }}>
-          <h1 style={{paddingTop: '1rem'}}>{galleryData.heroSubtitle}</h1>
-          <div className="subtitle" style={{paddingTop: '1rem'}}>{galleryData.subtitle}</div>
-          <p className="info">
-            {galleryData.info}
+        <div className="text-box" style={{ paddingTop: "1rem" }}>
+          <h1 style={{ paddingTop: "1rem" }}>{galleryData.heroSubtitle}</h1>
+          <div className="subtitle" style={{ paddingTop: "1rem" }}>
+            {galleryData.subtitle}
+          </div>
+          <p className="info">{galleryData.info}</p>
+          <ul className="info">
+            <li>{galleryData.li1}</li>
+            <li>{galleryData.li2}</li>
+            <li>{galleryData.li3}</li>
+            <li>{galleryData.li4}</li>
+            <li>{galleryData.li5}</li>
+            <li>{galleryData.li6}</li>
+            <li>{galleryData.li7}</li>
+            <li>{galleryData.li8}</li>
+            <li>{galleryData.li9}</li>
             {galleryData.link && (
               <a
                 href={galleryData.link}
@@ -99,7 +110,7 @@ const GalleryPage = () => {
                 view here
               </a>
             )}
-          </p>
+          </ul>
         </div>
       </section>
       <Helmet
