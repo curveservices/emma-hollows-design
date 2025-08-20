@@ -82,7 +82,7 @@ const GalleryPage = () => {
           autoPlay
         />
         <div className="text-box" style={{ paddingTop: "1rem" }}>
-          <h1 style={{ paddingTop: "1rem" }}>{galleryData.heroSubtitle}</h1>
+          <h2 style={{ paddingTop: "1rem" }}>{galleryData.heroSubtitle}</h2>
           <div className="subtitle" style={{ paddingTop: "1rem" }}>
             {galleryData.subtitle}
           </div>
