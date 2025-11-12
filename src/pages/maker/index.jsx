@@ -21,18 +21,6 @@ const Maker = () => {
       </section>
       <section className={`second-section`}>
         <FeaturedWork cardsData={makerData} />
-        <div className="text-box">
-          <div className="subtitle">Millinery</div>
-        </div>
-        <FeaturedWork cardsData={millineryData} />
-        <div className="text-box">
-          <div className="subtitle">Masks</div>
-        </div>
-        <FeaturedWork cardsData={masksData} />
-        <div className="text-box">
-          <div className="subtitle">Other</div>
-        </div>
-        <FeaturedWork cardsData={otherData} />
       </section>
       <Helmet
         title="Maker | London Costume Desgin for Theatre and Film"

@@ -7,12 +7,9 @@ import LoadingSpinner from "../../components/loadingSpinner";
 import Socials from "../../components/socials";
 
 const Home = () => {
-  const { cardsData: designerData, loading: loadingDesigner, error: errorDesigner } = useFirestoreData('designer');
-  const { cardsData: supervisorData, loading: loadingSupervisor, error: errorSupervisor } = useFirestoreData("wardrobe");
-  const { cardsData: makerData, loading: loadingMaker, error: errorMaker } = useFirestoreData("maker");
-  const { cardsData: illustratorData, loading: loadingIllustrator, error: errorIllustrator } = useFirestoreData("illustrations");
-  if (loadingDesigner || loadingSupervisor || loadingMaker || loadingIllustrator) return <LoadingSpinner />;
-  if (errorDesigner || errorSupervisor || errorMaker || errorIllustrator) return <div className='error-message'>Error: {error}</div>;
+  const { cardsData: featuredData, loading: loadingFeatured, error: errorFeatued } = useFirestoreData("featured");
+  if (loadingFeatured) return <LoadingSpinner />;
+  if (errorFeatued) return <div className='error-message'>Error: {error}</div>;
   return (
     <>
       <div className="home-page">
@@ -23,10 +20,7 @@ const Home = () => {
           </div>
         </div>
         <div className={`second-section`}>
-          <FeaturedWork cardsData={supervisorData} />
-          <FeaturedWork cardsData={designerData} />
-          <FeaturedWork cardsData={makerData} />
-          <FeaturedWork cardsData={illustratorData} />
+          <FeaturedWork cardsData={featuredData} />
         </div>
         <Helmet
           title="Home | London Costume Desgin for Theatre and Film"

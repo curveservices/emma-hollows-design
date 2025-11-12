@@ -221,8 +221,10 @@
     .gallery-page,
     .policiy-page {
         .hero {
+          height: 25vh !important;
           .text-box {
-            justify-content: flex-end;
+            padding-top: 5rem;
+            justify-content: center;
           }
           .socials {
             align-items: end;
