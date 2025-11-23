@@ -112,10 +112,18 @@ const About = () => {
             </thead>
             <tbody>
               <tr>
+                <td>Strictly Come Dancing - BBC (2025)</td>
+                <td>Costume Assistant</td>
+                <td>Nikki Parsons</td>
+                <td>Vicky Gill</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
                 <td>Last Days - Royal Opera House</td>
                 <td>Costume Supervisor</td>
                 <td>Anna Morrissey and Matt Copson</td>
-                <td>TBC</td>
+                <td>Nat Turner</td>
               </tr>
             </tbody>
             <tbody>
@@ -180,7 +188,7 @@ const About = () => {
                 </td>
                 <td>Costume Designer</td>
                 <td>Emily Layton - Tiff Milner</td>
-                <td>-</td>
+                <td>Emma Hollows</td>
               </tr>
             </tbody>
           </table>
@@ -302,9 +310,9 @@ const About = () => {
               </tr>
               <tr>
                 <td>Blubber - The Roundhouse</td>
-                <td>Costume Maker</td>
+                <td>Costume Designer</td>
                 <td>Rafaella Marcus</td>
-                <td>-</td>
+                <td>Emma Hollows</td>
               </tr>
             </tbody>
           </table>
@@ -356,34 +364,7 @@ const About = () => {
           </table>
         </div>
 
-        <div className="subtitle">Awards and Distinctions</div>
-        <ul>
-          <li>Augusta Savage Gallery Outhreach Exhibition 2020</li>
-          <li>
-            University of Massachusetts Amherst Department of Theatre Travel
-            Grant 2020
-          </li>
-          <li>University of Massachusetts Amhurst Arts Council Grant 2019</li>
-          <li>
-            University of Massachusetts Amhurst Graduate School Dissertation
-            Research Grant 2019
-          </li>
-          <li>
-            University of Massachusetts Amhurst College of Humanities and Fine
-            Arts Grant 2019
-          </li>
-          <li>
-            University of Massachusetts Amhurst Department of Theatre Travel
-            Grant 1029
-          </li>
-          <li>
-            University of Massachusetts Amhurst Department of Theatre Travel
-            Grant 2018
-          </li>
-          <li>The Mary Euphrasia Mosley Fund 2014</li>
-          <li>Homerton College Research Grant 2014</li>
-        </ul>
-
+       
         <div className="subtitle">Education</div>
         <div className="cv-table-wrapper">
           <table>
