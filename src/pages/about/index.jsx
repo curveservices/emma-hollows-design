@@ -304,12 +304,6 @@ const About = () => {
                 <td>Mark Thompson</td>
               </tr>
               <tr>
-                <td>Singin' in the Rain - UK Tour</td>
-                <td>Dep Wardrobe Asst</td>
-                <td>Jonathan Church</td>
-                <td>Simon Higlett</td>
-              </tr>
-              <tr>
                 <td>Blubber - The Roundhouse</td>
                 <td>Costume Designer</td>
                 <td>Rafaella Marcus</td>
@@ -354,12 +348,6 @@ const About = () => {
                 <td>Costume Designer</td>
                 <td>Nott Brothers</td>
                 <td>Emma Hollows</td>
-              </tr>
-              <tr>
-                <td>Hanna 3 - Commercial Shoot</td>
-                <td>Dresser</td>
-                <td>Amazon Prime</td>
-                <td>-</td>
               </tr>
             </tbody>
           </table>
@@ -418,12 +406,6 @@ const About = () => {
                 <td>Costume Designer and Maker</td>
                 <td>Iya Judyie Al-Bilali</td>
                 <td>Emma Hollows</td>
-              </tr>
-              <tr>
-                <td>Merry Wives of Windsor - Shakespeare and Company, MA</td>
-                <td>Head of Wardrobe</td>
-                <td>Kevin G Coleman</td>
-                <td>Kiki Smith</td>
               </tr>
               <tr>
                 <td>Queer and Now - NYPOP, NYC</td>
@@ -516,12 +498,6 @@ const About = () => {
                 <td>Costume Designer</td>
                 <td>Tom Vacanti - Leslie Frye</td>
                 <td>Emma Hollows</td>
-              </tr>
-              <tr>
-                <td>GLORIA - Hapstead Theatre</td>
-                <td>Head of Wardrobe</td>
-                <td>Michael Longhurst</td>
-                <td>Lizzie Clachan</td>
               </tr>
             </tbody>
           </table>
