@@ -9,7 +9,6 @@ import LoadingSpinner from './components/loadingSpinner/index.jsx';
 import Layout from "./layout/main/index.jsx";
 import Home from "./pages/home/index.jsx"
 import About from "./pages/about/index.jsx";
-import Illustrator from "./pages/illustrator/index.jsx";
 import NotFound from './pages/404/index.jsx';
 import Designer from "./pages/designer/index.jsx";
 import Maker from "./pages/maker/index.jsx";
@@ -37,12 +36,6 @@ const router = createBrowserRouter(
         <Route path="about-me" element={
           <Suspense fallback={<LoadingSpinner />}>
             <About />
-          </Suspense>
-        }
-        />
-        <Route path="illustrator" element={
-          <Suspense fallback={<LoadingSpinner />}>
-            <Illustrator/>
           </Suspense>
         }
         />

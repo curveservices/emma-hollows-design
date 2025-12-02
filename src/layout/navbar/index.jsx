@@ -74,7 +74,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/illustrator"
+            to="/illustrations"
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setShowNav(false)}
           >
