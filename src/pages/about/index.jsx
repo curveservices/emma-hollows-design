@@ -112,26 +112,22 @@ const About = () => {
             </thead>
             <tbody>
               <tr>
+                <td>Carmen - Teatro Real, Madrid</td>
+                <td>Assistant Costume Designer</td>
+                <td>Damiano Michieletto</td>
+                <td>Carla Teti</td>
+              </tr>
+              <tr>
                 <td>Strictly Come Dancing - BBC (2025)</td>
                 <td>Costume Assistant</td>
                 <td>Nikki Parsons</td>
                 <td>Vicky Gill</td>
               </tr>
-            </tbody>
-            <tbody>
               <tr>
                 <td>Last Days - Royal Opera House</td>
                 <td>Costume Supervisor</td>
                 <td>Anna Morrissey and Matt Copson</td>
                 <td>Nat Turner</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Carmen - Teatro Real, Madrid</td>
-                <td>Asst Costume Designer</td>
-                <td>Damiano Michieletto</td>
-                <td>Carla Teti</td>
               </tr>
               <tr>
                 <td>Carmen - Royal Opera House</td>
@@ -163,7 +159,8 @@ const About = () => {
             <tbody>
               <tr>
                 <td>
-                  The Curious Case of Benjimin Button - Ambassadors Theatre
+                  The Curious Case of Benjimin Button - Ambassadors Theatre,
+                  West End
                 </td>
                 <td>Costume Supervisor</td>
                 <td>Jethro Compton</td>
@@ -177,7 +174,7 @@ const About = () => {
               </tr>
               <tr>
                 <td>Carmen - Royal Opera House</td>
-                <td>Asst Costume Supervisor</td>
+                <td>Assistant Costume Supervisor</td>
                 <td>Damiano Michieletto</td>
                 <td>Carla Teti</td>
               </tr>
@@ -208,19 +205,21 @@ const About = () => {
             <tbody>
               <tr>
                 <td>Aladdin - UK Tour</td>
-                <td>Asst Costume Designer</td>
+                <td>Assistant Costume Designer</td>
                 <td>Casey Nicholaw</td>
                 <td>Gregg Barnes</td>
               </tr>
               <tr>
-                <td>Jersey Boys - Trafalgar Theatre</td>
-                <td>Asst Costume Designer</td>
+                <td>Jersey Boys - Trafalgar Theatre, West End</td>
+                <td>Assistant Costume Designer</td>
                 <td>Des McAnuff</td>
                 <td>Jess Goldstein</td>
               </tr>
               <tr>
-                <td>Tina: The Tina Turner Musical - Aldwych Theatre</td>
-                <td>Asst Costume Supervisor</td>
+                <td>
+                  Tina: The Tina Turner Musical - Aldwych Theatre, West End
+                </td>
+                <td>Assistant Costume Supervisor</td>
                 <td>Phyllida Lloyd</td>
                 <td>Mark Thompson</td>
               </tr>
@@ -237,7 +236,7 @@ const About = () => {
                 <td>
                   Back to the Future: The Musical - Winter Garden Theatre, NYC
                 </td>
-                <td>Asst Costume Supervisor</td>
+                <td>Assistant Costume Supervisor</td>
                 <td>John Rando</td>
                 <td>Tim Hatley</td>
               </tr>
@@ -280,7 +279,7 @@ const About = () => {
             <tbody>
               <tr>
                 <td>Alcina - Royal Opera House</td>
-                <td>Asst Costume Supervisor</td>
+                <td>Assistant Costume Supervisor</td>
                 <td>Richard Jones</td>
                 <td>Antony McDonald</td>
               </tr>
@@ -297,7 +296,9 @@ const About = () => {
                 <td>Emma Hollows</td>
               </tr>
               <tr>
-                <td>Tina: The Tina Turner Musical - Aldwych Theatre</td>
+                <td>
+                  Tina: The Tina Turner Musical - Aldwych Theatre, West End
+                </td>
                 <td>Principal Dresser (2021 - 2022)</td>
                 <td>Phyllida Lloyd</td>
                 <td>Mark Thompson</td>
@@ -349,7 +350,7 @@ const About = () => {
                 <td>Emma Hollows</td>
               </tr>
               <tr>
-                <td>It Takes Two</td>
+                <td>It Takes Two - Commercial</td>
                 <td>Costume Designer</td>
                 <td>Nott Brothers</td>
                 <td>Emma Hollows</td>
@@ -364,7 +365,228 @@ const About = () => {
           </table>
         </div>
 
-       
+        <div className="subtitle">2020</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Mr Burns: A Post-Electric Play - University of Massachusetts
+                  Amherst, MA
+                </td>
+                <td>Maker</td>
+                <td>Michelle Hendrick</td>
+                <td>Calypso Michelet</td>
+              </tr>
+              <tr>
+                <td>
+                  The Water Station - University of Massachusetts Amherst, MA
+                </td>
+                <td>Maker</td>
+                <td>Vishnupad Barve</td>
+                <td>Mikayla Reid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="subtitle">2019</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  The Bacchae of Euripedes - University of Massachusetts
+                  Amherst, MA
+                </td>
+                <td>Costume Designer and Maker</td>
+                <td>Iya Judyie Al-Bilali</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>Merry Wives of Windsor - Shakespeare and Company, MA</td>
+                <td>Head of Wardrobe</td>
+                <td>Kevin G Coleman</td>
+                <td>Kiki Smith</td>
+              </tr>
+              <tr>
+                <td>Queer and Now - NYPOP, NYC</td>
+                <td>Maker and Performer</td>
+                <td>Garrett Sager</td>
+                <td>Christina Beam</td>
+              </tr>
+              <tr>
+                <td>She Loves Me - University of Connecticut, CT</td>
+                <td>Assistant Costume Designer</td>
+                <td>Michelle Hendrick</td>
+                <td>Christina Beam</td>
+              </tr>
+              <tr>
+                <td>Wild Thing - University of Massachusetts Amherst, MA</td>
+                <td>Maker</td>
+                <td>Gina Kaufmann</td>
+                <td>Mikayla Reid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="subtitle">2018</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director / Choreographers</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Snowflakes - University of Massachusetts Amherst, MA</td>
+                <td>Costume Desiger</td>
+                <td>Gabriel Harrell</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>The Tudor Tailor - Nottingham (historical costumier)</td>
+                <td>Maker</td>
+                <td>Ninya Mikhaila</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  The Lily's Revenge - University of Massachusetts Amherst, MA
+                </td>
+                <td>Maker</td>
+                <td>Jen Onopa</td>
+                <td>Christina Beam</td>
+              </tr>
+              <tr>
+                <td>
+                  What of the Night - University of Massachusetts Amherst, MA
+                </td>
+                <td>Maker</td>
+                <td>Vishnupad Barve</td>
+                <td>Brennan Stefanik</td>
+              </tr>
+              <tr>
+                <td>Dream Play - University of Massachusetts Amherst, MA</td>
+                <td>Assistant Designer</td>
+                <td>Corinne Miller</td>
+                <td>Felicia Malachite</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="subtitle">2017</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director / Choreographers</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Cadaver Exquisito - University of Massachusetts Amherst, MA
+                </td>
+                <td>Costume Designer</td>
+                <td>Tom Vacanti - Leslie Frye</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>GLORIA - Hapstead Theatre</td>
+                <td>Head of Wardrobe</td>
+                <td>Michael Longhurst</td>
+                <td>Lizzie Clachan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="subtitle">2016</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Force of Trump - Camden Fringe and The Space
+                </td>
+                <td>Costume and Set Designer</td>
+                <td>Sami Ibrahim</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>Morning Wood - Short Film</td>
+                <td>Production and Costume Designer</td>
+                <td>Helen Simmons</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>Voice - Short Film </td>
+                <td>Production Designer</td>
+                <td>Jamie Foster</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Post Coital - Short Film Series</td>
+                <td>Production and Costume Designer</td>
+                <td>Lowell Walker</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>James and the Giant Peach - World Tour</td>
+                <td>Maker</td>
+                <td>Bronagh Lagan</td>
+                <td>Kate Unwin</td>
+              </tr>
+              <tr>
+                <td>Can't Stand Up For Falling Down - N16 Theatre</td>
+                <td>Costume and Set Designer</td>
+                <td>Marjam Lohne</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>If I Go - Proforça</td>
+                <td>Costume and Set Designer</td>
+                <td>David Brady</td>
+                <td>Emma Hollows</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div className="subtitle">Education</div>
         <div className="cv-table-wrapper">
           <table>
