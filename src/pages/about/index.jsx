@@ -99,6 +99,34 @@ const About = () => {
           </div>
         </div>
 
+        <div className="subtitle">2026</div>
+        <div className="cv-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Production - Venue</th>
+                <th>Role</th>
+                <th>Director</th>
+                <th>Costume Designer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Saturated with Myself - Cadogan Hall</td>
+                <td>Costume Designer</td>
+                <td>Donald Sturrock</td>
+                <td>Emma Hollows</td>
+              </tr>
+              <tr>
+                <td>Living Sirah - Alsirah Gardens, Saudi Arabia</td>
+                <td>Costume Designer</td>
+                <td>Neil Connolly</td>
+                <td>Emma Hollows</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div className="subtitle">2025</div>
         <div className="cv-table-wrapper">
           <table>
@@ -516,9 +544,7 @@ const About = () => {
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Force of Trump - Camden Fringe and The Space
-                </td>
+                <td>Force of Trump - Camden Fringe and The Space</td>
                 <td>Costume and Set Designer</td>
                 <td>Sami Ibrahim</td>
                 <td>Emma Hollows</td>
